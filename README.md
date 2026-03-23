@@ -7,6 +7,13 @@ Aplicação web responsiva desenvolvida com foco na organização e visualizaç�
 Em andamento.
 
 ## 🎨 Design
+Em andamento.
+
+## 🌐 Site em Produção - GitHub Pages
+Em andamento.
+
+## 💻 Tecnologias e Dependências
+Em andamento.
 
 ## ✅ Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
@@ -43,3 +50,9 @@ Em andamento.
 - [ ] ID 22 - Realiza requisições assíncronas para uma API fake (ex.: JSON Server) para persistir dados de um formulário.
 - [ ] ID 23 - Realiza requisições assíncronas para uma API fake para exibir dados na página.
 - [ ] ID 24 - Realiza requisições assíncronas para APIs públicas reais (OpenWeather, ViaCEP etc.), exibindo os dados e tratando erros.
+
+## 📖 Manual de Execução
+Em andamento.
+
+## 📱 Telas de Aplicação
+Em andamento.
