@@ -1,10 +1,12 @@
 # life-track
 
 ### Autor: Leonardo Correa Padilha
-Aplicação web responsiva desenvolvida com foco na organização e visualização de eventos pessoais ao longo do tempo. A aplicação permite ao usuário registrar momentos importantes da sua vida, categorizá-los e acompanhá-los em uma linha do tempo interativa.
+Aplicação web responsiva desenvolvida com foco na organização e visualização de eventos pessoais ao longo do tempo. A aplicação permite ao usuário registrar momentos importantes da sua vida, categorizá-los e acompanhá-los em uma linha do tempo interativa. O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## 📘 Documentação do Projeto
-Em andamento.
+Para entender as regras de negócio, o escopo e a arquitetura técnica da aplicação, consulte os documentos abaixo:
+- [📄 Product Requirements Document (PRD)](./docs/prd.md) - Visão geral, atores e histórias de usuário.
+- [🛠️ Especificação Técnica (Tech Spec)](./docs/spec.md) - Diagrama de banco de dados (DER), dicionário de dados e rotas da API (JSON Server).
 
 ## 🎨 Design
 Em andamento.
@@ -13,7 +15,12 @@ Em andamento.
 Em andamento.
 
 ## 💻 Tecnologias e Dependências
-Em andamento.
+
+**Framework CSS:** Bootstrap
+
+**JavaScript:**
+  * **jQuery** - Para manipulação do DOM, tratamento de eventos, validação de formulários e requisições AJAX.
+  * **JSON Server** - Para simular uma API REST, permitindo persistir, consultar, editar e excluir eventos da aplicação.
 
 ## ✅ Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
