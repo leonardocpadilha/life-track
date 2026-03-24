@@ -9,6 +9,7 @@ erDiagram
 USER {
 int id
 string nome
+string senha
 }
 
 EVENT {
@@ -67,5 +68,4 @@ A aplicação consome uma API fake simulada com JSON Server. Abaixo os principai
 * `GET /eventos` → Retorna todos os eventos.
 * `GET /eventos?user_id=1` → Retorna eventos de um usuário específico.
 * `POST /eventos` → Cadastra um novo evento.
-* `PUT /eventos/:id` → Atualiza um evento existente.
 * `DELETE /eventos/:id` → Remove um evento.
