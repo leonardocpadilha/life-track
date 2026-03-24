@@ -22,17 +22,7 @@ string imagem_url
 int user_id
 }
 
-WRAPPED {
-int id
-int ano
-int total_eventos
-string categoria_mais_frequente
-string mes_mais_ativo
-int user_id
-}
-
 USER ||--o{ EVENT : possui
-USER ||--o{ WRAPPED : gera
 ```
 
 ## 2. Dicionário de Dados
@@ -48,14 +38,6 @@ Breve explicação das tabelas principais sobre a estrutura de dados da aplicaç
   - **categoria:** Classificação do evento (ex: Estudos, Trabalho, Pessoal). Utilizada para filtros e análises.
   - **imagem_url:** URL de uma imagem associada ao evento (opcional).
   - **user_id:** Chave estrangeira que vincula o evento ao usuário (padrão utilizado pelo JSON Server para relacionamentos).
- 
-- **Wrapped (Retrospectiva):** Representa os dados consolidados da retrospectiva anual do usuário.
-  - **id:** Identificador único da retrospectiva (Number).
-  - **ano:** Ano de referência da análise.
-  - **total_eventos:** Quantidade total de eventos registrados no ano.
-  - **categoria_mais_frequente:** Categoria com maior número de eventos.
-  - **mes_mais_ativo:** Mês com maior quantidade de registros.
-  - **user_id:** Identificador do usuário ao qual a retrospectiva pertence.
 
 ## 3. Rotas da API (JSON Server)
 A aplicação consome uma API fake simulada com JSON Server. Abaixo os principais endpoints:
