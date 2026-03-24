@@ -35,3 +35,37 @@ USER ||--o{ WRAPPED : gera
 ```
 
 ## 2. Dicionário de Dados
+Breve explicação das tabelas principais sobre a estrutura de dados da aplicação LifeTrack:
+- **Usuários:** Responsável por armazenar os dados básicos do usuário da aplicação. Mesmo que o sistema não implemente autenticação completa no MVP, essa entidade permite estruturar a aplicação para múltiplos usuários no futuro.
+  - **id:** Identificador único gerado pelo JSON Server (Number).
+  - **nome:** Nome do usuário utilizado para identificação na aplicação.
+- **Eventos:** Registra todos os eventos da linha do tempo do usuário. É a entidade central do sistema. A partir dela são geradas as visualizações da timeline e os dados para a retrospectiva (Wrapped).
+  - **id:** Identificador único do evento (Number).
+  - **titulo:** Nome do evento (campo obrigatório).
+  - **descricao:** Texto descritivo opcional com detalhes do evento.
+  - **data:** Data em que o evento ocorreu (formato Date).
+  - **categoria:** Classificação do evento (ex: Estudos, Trabalho, Pessoal). Utilizada para filtros e análises.
+  - **imagem_url:** URL de uma imagem associada ao evento (opcional).
+  - **user_id:** Chave estrangeira que vincula o evento ao usuário (padrão utilizado pelo JSON Server para relacionamentos).
+ 
+- **Wrapped (Retrospectiva):** Representa os dados consolidados da retrospectiva anual do usuário.
+  - **id:** Identificador único da retrospectiva (Number).
+  - **ano:** Ano de referência da análise.
+  - **total_eventos:** Quantidade total de eventos registrados no ano.
+  - **categoria_mais_frequente:** Categoria com maior número de eventos.
+  - **mes_mais_ativo:** Mês com maior quantidade de registros.
+  - **user_id:** Identificador do usuário ao qual a retrospectiva pertence.
+
+## 3. Rotas da API (JSON Server)
+A aplicação consome uma API fake simulada com JSON Server. Abaixo os principais endpoints:
+
+**Usuários**
+- `GET /usuarios` → Retorna a lista de usuários.
+- `POST /usuarios` → Cadastra um novo usuário.
+
+**Eventos**
+- `GET /eventos` → Retorna todos os eventos.
+- `GET /eventos?user_id=1` → Retorna eventos de um usuário específico.
+- `POST /eventos` → Cadastra um novo evento.
+- `PUT /eventos/:id` → Atualiza um evento existente.
+- `DELETE /eventos/:id` → Remove um evento.
