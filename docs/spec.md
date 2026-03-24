@@ -59,13 +59,13 @@ Breve explicação das tabelas principais sobre a estrutura de dados da aplicaç
 ## 3. Rotas da API (JSON Server)
 A aplicação consome uma API fake simulada com JSON Server. Abaixo os principais endpoints:
 
-**Usuários**
-- `GET /usuarios` → Retorna a lista de usuários.
-- `POST /usuarios` → Cadastra um novo usuário.
+**Usuários:**
+* `GET /usuarios` → Retorna a lista de usuários.
+* `POST /usuarios` → Cadastra um novo usuário.
 
-**Eventos**
-- `GET /eventos` → Retorna todos os eventos.
-- `GET /eventos?user_id=1` → Retorna eventos de um usuário específico.
-- `POST /eventos` → Cadastra um novo evento.
-- `PUT /eventos/:id` → Atualiza um evento existente.
-- `DELETE /eventos/:id` → Remove um evento.
+**Eventos:**
+* `GET /eventos` → Retorna todos os eventos.
+* `GET /eventos?user_id=1` → Retorna eventos de um usuário específico.
+* `POST /eventos` → Cadastra um novo evento.
+* `PUT /eventos/:id` → Atualiza um evento existente.
+* `DELETE /eventos/:id` → Remove um evento.
