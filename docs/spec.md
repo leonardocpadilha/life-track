@@ -54,4 +54,5 @@ A aplicação consome uma API fake simulada com JSON Server. Abaixo os principai
 
 ## 4. Versões das Tecnologias Utilizadas
 * Bootstrap v5.3.8.
-* 
+* Cloudinary API v1_1.
+* Mapbox API v5.
