@@ -51,3 +51,7 @@ A aplicação consome uma API fake simulada com JSON Server. Abaixo os principai
 * `GET /eventos?user_id=1` → Retorna eventos de um usuário específico.
 * `POST /eventos` → Cadastra um novo evento.
 * `DELETE /eventos/:id` → Remove um evento.
+
+## 4. Versões das Tecnologias Utilizadas
+* Bootstrap v5.3.8.
+* 
