@@ -22,6 +22,10 @@ Em andamento.
   * **jQuery** - Para manipulação do DOM, tratamento de eventos, validação de formulários e requisições AJAX.
   * **JSON Server** - Para simular uma API REST, permitindo persistir, consultar, editar e excluir eventos da aplicação.
 
+**API's Públicas:**
+* **Cloudinary API** -
+* **Mapbox API** - 
+
 ## ✅ Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
 ### RA1 - Utilizar Frameworks CSS para estilização de elementos HTML e criação de layouts responsivos.
