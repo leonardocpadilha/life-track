@@ -19,14 +19,14 @@ Em andamento.
 **Framework CSS:** 
 * **Bootstrap** - A escolha do Bootstrap no desenvolvimento do LifeTrack foi motivada pela necessidade de criar uma interface moderna, responsiva e consistente de forma ágil. Como o projeto envolve múltiplas telas e interações, o uso deste framework permite acelerar o processo de construção visual, oferecendo componentes prontos e padronizados que garantem coerência estética em toda a aplicação. Além disso, o sistema de grid do Bootstrap facilita a adaptação da interface para diferentes tamanhos de tela, assegurando uma boa experiência tanto em dispositivos móveis quanto em desktops.
 
-**JavaScript:**
-  * **jQuery** - Para manipulação do DOM, tratamento de eventos, validação de formulários e requisições AJAX.
-  * **JSON Server** - Para simular uma API REST, permitindo persistir, consultar, editar e excluir eventos da aplicação.
-
 **API's Públicas:**
 * **Cloudinary API** - A escolha do Cloudinary no LifeTrack foi guiada pela necessidade de oferecer uma experiência visual fluida e consistente no registro de momentos. O Cloudinary permite otimizar automaticamente as imagens, garantindo carregamento rápido e qualidade adequada em diferentes dispositivos e condições de conexão, contribuindo diretamente para a experiência do usuário.
 
 * **Mapbox API** - A adoção do Mapbox está diretamente relacionada à necessidade de tornar o registro de localização mais simples, rápido e intuitivo para o usuário. Por meio do recurso de autocomplete, a API permite que o usuário encontre e selecione lugares com facilidade a partir de poucas letras digitadas, reduzindo o esforço manual e evitando inconsistências no preenchimento. Além disso, a padronização dos locais selecionados contribui para uma experiência mais organizada e coerente dentro da timeline, reforçando o papel da localização como um elemento contextual relevante em cada registro.
+
+**JavaScript:**
+  * **jQuery** - Para manipulação do DOM, tratamento de eventos, validação de formulários e requisições AJAX.
+  * **JSON Server** - Para simular uma API REST, permitindo persistir, consultar, editar e excluir eventos da aplicação.
 
 ## ✅ Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
