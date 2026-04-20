@@ -1,0 +1,28 @@
+{
+  "name": "life-track",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardocpadilha/life-track.git"
+  },
+  "keywords": [],
+  "author": "Leonardo Correa Padilha",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/leonardocpadilha/life-track/issues"
+  },
+  "homepage": "https://github.com/leonardocpadilha/life-track#readme",
+  "dependencies": {
+    "jquery": "^4.0.0",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
