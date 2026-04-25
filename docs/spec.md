@@ -6,49 +6,48 @@ Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura
 
 ```mermaid
 erDiagram
-USERS {
-  int id
-  string nome
-  string email
-  string senha
-}
+    USER {
+        int id
+        string nome
+        string senha
+    }
 
-EVENT {
-  int id
-  string titulo
-  string descricao
-  date data
-  string categoria
-  string imagem_url
-  int user_id
-}
+    EVENT {
+        int id
+        string titulo
+        string descricao
+        date data
+        string categoria
+        string imagem_url
+        int user_id
+    }
 
-TAG {
-  int id
-  string nome
-}
+    TAG {
+        int id
+        string nome
+    }
 
-SENTIMENTO {
-  int id
-  string nome
-}
+    SENTIMENTO {
+        int id
+        string nome
+    }
 
-LOCALIZACAO {
-  int id
-  string nome
-}
+    LOCALIZACAO {
+        int id
+        string nome
+    }
 
-EVENT_TAG {
-  int id
-  int event_id
-  int tag_id
-}
+    EVENT_TAG {
+        int id
+        int event_id
+        int tag_id
+    }
 
-USER ||--o{ EVENT : possui
-EVENT ||--o{ EVENT_TAG : possui
-TAG ||--o{ EVENT_TAG : associa
-EVENT }o--|| SENTIMENTO : possui
-EVENT }o--|| LOCALIZACAO : ocorre_em
+    USER ||--o{ EVENT : "possui"
+    EVENT ||--o{ EVENT_TAG : "possui"
+    TAG ||--o{ EVENT_TAG : "associa"
+    EVENT }o--|| SENTIMENTO : "possui"
+    EVENT }o--|| LOCALIZACAO : "ocorre_em"
 ```
 
 ## 2. Dicionário de Dados
@@ -75,26 +74,26 @@ Entidade central da aplicação. Armazena os momentos registrados pelo usuário.
   - **sentimento_id:** Referência ao sentimento associado.
   - **localizacao_id:** Referência à localização do evento.
 
-###Tags
+### Tags
 Representam palavras-chave associadas aos eventos.
 
   - **id:** Identificador único.
   - **nome:** Nome da tag.
 
-###Evento_Tags (Tabela associativa)
+### Evento_Tags (Tabela associativa)
 Relaciona eventos e tags (N:N).
 
   - **id:** Identificador.
   - **event_id:** Referência ao evento.
   - **tag_id:** Referência à tag.
 
-###Sentimentos
+### Sentimentos
 Representam o estado emocional associado ao evento.
 
   - **id:** Identador único.
   - **nome:** Nome do sentimento.
 
-###Localização
+### Localização
 Representa o local onde o evento ocorreu.
 
   - **id:** Identificador único.
@@ -114,20 +113,20 @@ A aplicação consome uma API fake simulada com JSON Server. Abaixo os principai
 * `DELETE /eventos/:id` → Remove um evento.
 
 **Tags:**
-* GET /tags → Lista todas as tags.
-* POST /tags → Cria uma tag.
+* `GET /tags` → Lista todas as tags.
+* `POST /tags` → Cria uma tag.
 
 **Evento_Tags:**
-* GET /event_tag → Lista relações.
-* POST /event_tag → Associa tag ao evento.
+* `GET /event_tag` → Lista relações.
+* `POST /event_tag` → Associa tag ao evento.
 
 **Sentimentos:**
-* GET /sentimentos → Lista sentimentos.
-* POST /sentimentos → Adiciona um sentimento.
+* `GET /sentimentos` → Lista sentimentos.
+* `POST /sentimentos` → Adiciona um sentimento.
 
 **Localização:**
-* GET /localizacoes → Lista locais.
-* POST /localizacoes → Adiciona um local.
+* `GET /localizacoes` → Lista locais.
+* `POST /localizacoes` → Adiciona um local.
 
 ## 4. Lógica de Geração de Insights (Frontend)
 A jornada do usuário não é armazenada no banco, sendo gerada dinamicamente no frontend com base nos eventos.
