@@ -6,12 +6,18 @@ Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura
 
 ```mermaid
 erDiagram
+    USER ||--o{ EVENT : "possui"
+    EVENT ||--o{ EVENT_TAG : "possui"
+    TAG ||--o{ EVENT_TAG : "associa"
+    EVENT }o--|| SENTIMENTO : "possui"
+    EVENT }o--|| LOCALIZACAO : "ocorre_em"
+
     USER {
         int id
         string nome
+        string email
         string senha
     }
-
     EVENT {
         int id
         string titulo
@@ -21,33 +27,23 @@ erDiagram
         string imagem_url
         int user_id
     }
-
     TAG {
         int id
         string nome
     }
-
     SENTIMENTO {
         int id
         string nome
     }
-
     LOCALIZACAO {
         int id
         string nome
     }
-
     EVENT_TAG {
         int id
         int event_id
         int tag_id
     }
-
-    USER ||--o{ EVENT : "possui"
-    EVENT ||--o{ EVENT_TAG : "possui"
-    TAG ||--o{ EVENT_TAG : "associa"
-    EVENT }o--|| SENTIMENTO : "possui"
-    EVENT }o--|| LOCALIZACAO : "ocorre_em"
 ```
 
 ## 2. Dicionário de Dados
@@ -56,7 +52,7 @@ Descrição das principais entidades da aplicação LifeTrack:
 ### Usuários
 Responsável por armazenar os dados básicos do usuário da aplicação. Mesmo que o sistema não implemente autenticação completa no MVP, essa entidade permite estruturar a aplicação para múltiplos usuários no futuro.
 
-  - **id:** Identificador único gerado pelo JSON Server (Number).
+  - **id:** Identificador único gerado pelo JSON Server.
   - **nome:** Nome do usuário utilizado para identificação na aplicação.
   - **email:** Email utilizado para autenticação (deve ser único).
   - **senha:** Senha do usuário.
@@ -132,15 +128,15 @@ A aplicação consome uma API fake simulada com JSON Server. Abaixo os principai
 A jornada do usuário não é armazenada no banco, sendo gerada dinamicamente no frontend com base nos eventos.
 
 **Exemplos de processamento:**
-* Contagem total de eventos
-* Agrupamento por categoria
-* Frequência de tags
-* Distribuição por localização
-* Identificação de padrões (mais recorrentes)
+* Contagem total de eventos.
+* Agrupamento por categoria.
+* Frequência de tags.
+* Distribuição por localização.
+* Identificação de padrões (mais recorrentes).
 
 **Saídas:**
-* Cards com estatísticas
-* Mensagens interpretativas. Ex: "Você registrou 40 momentos de aprendizado”
+* Cards com estatísticas.
+* Mensagens interpretativas. Ex: "Você registrou 40 momentos de aprendizado”.
 
 ## 5. Versões das Tecnologias Utilizadas:
 Para garantir a compatibilidade de componentes e a correta interpretação da aplicação, este projeto utiliza as seguintes tecnologias e suas respectivas versões:
