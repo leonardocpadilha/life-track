@@ -48,12 +48,12 @@ A tipografia combina expressividade (títulos) com legibilidade (interface). As 
 
 Define o estilo base dos elementos visuais.
 
-- **Cards e Containers:**
+- **Cards e Containers**
   - Fundo branco.
   - Bordas arredondadas (14px–20px).
   - Sombra suave (baixo nível de elevação).
 
-- **Modais (Floating Panels):**
+- **Modais (Floating Panels)**
   - Fundo branco.
   - Bordas arredondadas (20px–24px).
   - Sombra média.
@@ -142,7 +142,7 @@ Regras de comportamento da interface da aplicação.
 
 ### 8. Diretrizes de Uso
 
-Regras para manter consistência no sistema.
+Regras para manter a consistência na aplicação.
 
   - Priorizar o uso da cor primária apenas para ações principais.
   - Manter superfícies limpas e com baixo ruído visual.
