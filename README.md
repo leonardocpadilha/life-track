@@ -2,7 +2,7 @@
 
 ### Autor: Leonardo Correa Padilha
 
-Aplicação web responsiva desenvolvida com foco na organização e visualização de eventos pessoais ao longo do tempo. A aplicação permite ao usuário registrar momentos importantes da sua vida, categorizá-los e acompanhá-los em uma linha do tempo interativa. O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
+Aplicação web responsiva desenvolvida com foco no registro, organização, visualização e análise de eventos pessoais ao longo do tempo. A aplicação permite ao usuário registrar momentos importantes da sua vida, categorizá-los e acompanhá-los em uma linha do tempo interativa, além de gerar insights e resumos que ajudam na compreensão da sua jornada pessoal. O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## 📘 Documentação do Projeto
 
