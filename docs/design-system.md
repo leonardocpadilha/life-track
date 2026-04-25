@@ -18,11 +18,17 @@ As cores equilibram interatividade (ação) e neutralidade (leitura e reflexão)
 - **Cor de Alerta/Exclusão:** `#F25050` _(Vermelho Suave)_.
   - _Uso:_ Ações destrutivas (excluir, sair, avisos irreversíveis).
 
-- **Texto Principal:** `#464554` _(Cinza Escuro)_.
-  - _Uso:_ Títulos, headings e conteúdo principal.
+- **Cor Texto Principal:** `#50AFF2` _(Azul Primário)_.
+  - _Uso:_ Títulos H1.
 
-- **Texto Secundário:** `#767586` _(Cinza Médio)_.
-  - _Uso:_ Descrições, informações auxiliares e placeholders.
+- **Cor Texto Secundário:** `#464554` _(Cinza Escuro)_.
+  - _Uso:_ Títulos H2 a H6 e descrições.
+
+- **Cor Texto Placeholder:** `#767586` _(Cinza Médio)_.
+  - _Uso:_ Informações auxiliares e placeholders.
+
+- **Cor Escura:** `#000000` _(Preto)_:
+  - _Uso:_ Fundos escuros de alto contraste e destaques específicos na tela de jornada.
 
 - **Background Geral:** `#F8F8F8` _(Branco Suave)_.
   - _Uso:_ Fundo da aplicação.
@@ -49,28 +55,44 @@ A tipografia combina expressividade (títulos) com legibilidade (interface). As 
 Define o estilo base dos elementos visuais.
 
 - **Cards e Containers**
-  - Fundo branco.
+  - Fundo Branco.
   - Bordas arredondadas (14px–20px).
   - Sombra suave (baixo nível de elevação).
 
 - **Modais (Floating Panels)**
-  - Fundo branco.
+  - Fundo Branco.
   - Bordas arredondadas (20px–24px).
   - Sombra média.
   - Conteúdo centralizado.
 
-### 5. Componentes Base
+### 5. Variações de Superfície
+
+Para criar contraste e hierarquia visual na tela de Jornada, são utilizadas diferentes combinações de fundo e texto.
+
+- **Card Primário**
+  - Fundo: Azul Primário.
+  - Texto: Branco.
+
+- **Card Neutro**
+  - Fundo: Branco.
+  - Texto: Preto e Azul Primário.
+
+- **Card Escuro**
+  - Fundo: Preto.
+  - Texto: Branco e Azul Primário.
+
+### 6. Componentes Base
 
 Elementos visuais reutilizáveis da aplicação.
 
 - **Botões**
-  - Primário (.btn-primary):
+  - Primário `.btn-primary`:
     - Cor primária.
     - Border-radius: 12px.
     - Usado para ações principais (ex: registrar momento).
 
   - Secundário / Cancelamento:
-    - Fundo neutro `#EBEEF4`.
+    - Fundo Branco Neutro.
     - Baixa ênfase visual.
 
   - Destrutivo:
@@ -78,16 +100,16 @@ Elementos visuais reutilizáveis da aplicação.
     - Uso restrito a ações irreversíveis.
 
 - **Inputs e Formulários**
-  - Fundo cinza `#F2F4F6`.
+  - Fundo Cinza Suave.
   - Sem bordas pesadas.
   - Padding interno confortável (14px–18px).
   - Labels:
-    - Poppins SemiBold.
+    - `Poppins, san-serif` (Peso 600).
     - Tamanho reduzido.
     - Uppercase.
 
 - **Cards de Momento**
-  - Fundo branco `#FFFFFF`.
+  - Fundo Branco.
   - Bordas arredondadas.
   - Sombra leve.
   - Conteúdo organizado em:
@@ -105,11 +127,11 @@ Elementos visuais reutilizáveis da aplicação.
   - Borda tracejada (2px dashed).
   - Destaque com cor primária.
 
-### 6. Ícones
+### 7. Ícones
 
 Os ícones do LifeTrack são fornecidos via Iconify, permitindo acesso a múltiplas bibliotecas com padronização visual.
 
-- **Estilo predominante:** Outline (traço leve), priorizando consistência visual.
+- **Estilo predominante:** Regular, priorizando consistência visual.
 
 - **Uso**
   - Navegação (registrar momento, timeline e jornada).
@@ -117,11 +139,11 @@ Os ícones do LifeTrack são fornecidos via Iconify, permitindo acesso a múltip
   - Metadados (categoria, tag, sentimento e local).
 
 - **Cores**
-  - Primária `#50AFF2` → ações principais.
-  - Cinza `#464554` → estados neutros.
-  - Vermelho `#F25050` → ações destrutivas.
+  - Azul Primário → ações principais.
+  - Cinza Escuro → estados neutros.
+  - Vermelho Suave → ações destrutivas.
 
-### 7. Padrões de Interação
+### 8. Padrões de Interação
 
 Regras de comportamento da interface da aplicação.
 
@@ -137,10 +159,10 @@ Regras de comportamento da interface da aplicação.
     - Mensagem clara e objetiva.
   
   - Erro/Alerta:
-    - Uso de cor vermelha.
+    - Uso da cor Vermelho Suave.
     - Comunicação direta sobre impacto da ação.
 
-### 8. Diretrizes de Uso
+### 9. Diretrizes de Uso
 
 Regras para manter a consistência na aplicação.
 
