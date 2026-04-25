@@ -5,33 +5,34 @@ Este documento define a identidade visual do LifeTrack, priorizando uma interfac
 ### 1. Framework Base
 
 - **Framework escolhido:** Bootstrap.
+
 - **Motivação:** Permite a construção rápida de interfaces responsivas, com sistema de grid consolidado e fácil customização de componentes como botões, formulários e cards.
 
 ### 2. Paleta de Cores
 
 As cores equilibram interatividade (ação) e neutralidade (leitura e reflexão).
 
-- **Cor Primária (Ação/Destaque):** #50AFF2 _(Azul Primário)_.
+- **Cor Primária (Ação/Destaque):** `#50AFF2` _(Azul Primário)_.
   - _Uso:_ Botões principais, links ativos, ícones, elementos interativos e feedback positivo (confirmações, ações concluídas).
 
-- **Cor de Alerta/Exclusão:** #F25050 _(Vermelho Suave)_.
+- **Cor de Alerta/Exclusão:** `#F25050` _(Vermelho Suave)_.
   - _Uso:_ Ações destrutivas (excluir, sair, avisos irreversíveis).
 
-- **Texto Principal:** #464554 _(Cinza Escuro)_.
+- **Texto Principal:** `#464554` _(Cinza Escuro)_.
   - _Uso:_ Títulos, headings e conteúdo principal.
 
-- **Texto Secundário:** #767586 _(Cinza Médio)_.
+- **Texto Secundário:** `#767586` _(Cinza Médio)_.
   - _Uso:_ Descrições, informações auxiliares e placeholders.
 
-- **Background Geral:** #F8F8F8 _(Branco Suave)_.
+- **Background Geral:** `#F8F8F8` _(Branco Suave)_.
   - _Uso:_ Fundo da aplicação.
 
 - **Superfícies:**
-  - #FFFFFF _(Branco)_ → Cards principais.
-  - #F2F4F6 _(Cinza Suave)_ → Inputs e elementos secundários.
+  - `#FFFFFF` _(Branco)_ → Cards principais.
+  - `#F2F4F6` _(Cinza Suave)_ → Inputs e elementos secundários.
 
 - **Neutros de Controle:**
-  - #EBEEF4 _(Branco Neutro)_ → Botões secundários / cancelar.
+  - `#EBEEF4` _(Branco Neutro)_ → Botões secundários / cancelar.
 
 ### 3. Tipografia
 
@@ -69,7 +70,7 @@ Elementos visuais reutilizáveis da aplicação.
     - Usado para ações principais (ex: registrar momento).
 
   - Secundário / Cancelamento:
-    - Fundo neutro #EBEEF4.
+    - Fundo neutro `#EBEEF4`.
     - Baixa ênfase visual.
 
   - Destrutivo:
@@ -77,7 +78,7 @@ Elementos visuais reutilizáveis da aplicação.
     - Uso restrito a ações irreversíveis.
 
 - **Inputs e Formulários**
-  - Fundo: #F2F4F6.
+  - Fundo cinza `#F2F4F6`.
   - Sem bordas pesadas.
   - Padding interno confortável (14px–18px).
   - Labels:
@@ -86,7 +87,7 @@ Elementos visuais reutilizáveis da aplicação.
     - Uppercase.
 
 - **Cards de Momento**
-  - Fundo branco.
+  - Fundo branco `#FFFFFF`.
   - Bordas arredondadas.
   - Sombra leve.
   - Conteúdo organizado em:
@@ -116,9 +117,9 @@ Os ícones do LifeTrack são fornecidos via Iconify, permitindo acesso a múltip
   - Metadados (categoria, tag, sentimento e local).
 
 - **Cores**
-  - Primária #50AFF2 → ações principais.
-  - Cinza #464554 → estados neutros.
-  - Vermelho #F25050 → ações destrutivas.
+  - Primária `#50AFF2` → ações principais.
+  - Cinza `#464554` → estados neutros.
+  - Vermelho `#F25050` → ações destrutivas.
 
 ### 7. Padrões de Interação
 
