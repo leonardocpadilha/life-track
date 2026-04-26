@@ -42,7 +42,7 @@ erDiagram
         int id
         string nome
     }
-    c {
+    CATEGORIA {
         int id
         string nome
     }
