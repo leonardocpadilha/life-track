@@ -11,6 +11,7 @@ erDiagram
     TAG ||--o{ EVENT_TAG : "associa"
     EVENT }o--|| SENTIMENTO : "possui"
     EVENT }o--|| LOCALIZACAO : "ocorre_em"
+    EVENT }o--|| CATEGORIA : "classificado_em"
 
     USER {
         int id
@@ -23,9 +24,11 @@ erDiagram
         string titulo
         string descricao
         date data
-        string categoria
         string imagem_url
         int user_id
+        int categoria_id
+        int sentimento_id
+        int localizacao_id
     }
     TAG {
         int id
@@ -36,6 +39,10 @@ erDiagram
         string nome
     }
     LOCALIZACAO {
+        int id
+        string nome
+    }
+    c {
         int id
         string nome
     }
