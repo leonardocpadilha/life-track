@@ -22,7 +22,7 @@ As cores equilibram interatividade (ação) e neutralidade (leitura e reflexão)
   - _Uso:_ Títulos H1.
 
 - **Cor Texto Secundário:** `#464554` _(Cinza Escuro)_.
-  - _Uso:_ Títulos H2 a H6 e descrições.
+  - _Uso:_ Títulos H2 a H3 e descrições.
 
 - **Cor Texto Placeholder:** `#767586` _(Cinza Médio)_.
   - _Uso:_ Informações auxiliares e placeholders.
@@ -45,7 +45,7 @@ As cores equilibram interatividade (ação) e neutralidade (leitura e reflexão)
 A tipografia combina expressividade (títulos) com legibilidade (interface). As fontes são importadas via Google Fonts para garantir consistência visual e fácil implementação.
 
 - **Títulos e Destaques:** `Outfit, sans-serif` (Peso: 700).
-  - _Uso:_ Headings (H1–H6) e destaques visuais.
+  - _Uso:_ Headings (H1–H3) e destaques visuais.
 
 - **Interface e Texto:** `Poppins, sans-serif` (Pesos: 400, 500, 600).
   - _Uso:_ Botões, inputs, labels e textos descritivos.
