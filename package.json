@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/leonardocpadilha/life-track#readme",
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "jquery": "^4.0.0",
     "uuid": "^14.0.0"
   },
