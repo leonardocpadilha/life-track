@@ -1,0 +1,54 @@
+//---------------------------------------------------------------------------
+//PALETA DE CORES BASE
+//---------------------------------------------------------------------------
+$lt-azul-primario: #50AFF2;
+$lt-vermelho-suave: #F25050;
+$lt-cinza-escuro: #464554;
+$lt-cinza-medio: #767586;
+$lt-cinza-suave: #F2F4F6;
+$lt-branco-suave: #F8F8F8;
+$lt-branco-neutro: #EBEEF4;
+$lt-branco: #FFFFFF;
+$lt-preto: #000000;
+
+//---------------------------------------------------------------------------
+//CORES SEMÂNTICAS
+//---------------------------------------------------------------------------
+//Ações e Feedback
+$color-primary: $lt-azul-primario;
+$color-danger: $lt-vermelho-suave;
+
+//Textos
+$color-text-primary: $lt-azul-primario; //H1
+$color-text-secondary: $lt-cinza-escuro; //H2, H3
+$color-text-muted: $lt-cinza-medio; //Placeholder
+
+//Fundos
+$color-background: $lt-branco-suave;
+$color-surface: $lt-branco;
+$color-surface-secondary: $lt-cinza-suave;
+
+//Controles
+$color-neutral: $lt-branco-neutro;
+
+//---------------------------------------------------------------------------
+//BOOTSTRAP (OVERRIDE)
+//---------------------------------------------------------------------------
+$primary: $lt-azul-primario;
+$danger: $lt-vermelho-suave;
+
+$body-bg: $color-background;
+$body-color: $color-text-secondary;
+
+$light: $lt-branco;
+$dark: $lt-preto;
+
+//---------------------------------------------------------------------------
+//TIPOGRAFIA
+//---------------------------------------------------------------------------
+//Base
+$font-family-base: 'Poppins', sans-serif;
+
+//Títulos
+$headings-font-family: 'Outfit', sans-serif;
+$headings-font-weight: 700;
