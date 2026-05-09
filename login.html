@@ -27,15 +27,19 @@
                 <div class="card p-4">
                     <form class="form-login">
                         <h1 class="mb-3 text-dark">Olá, que bom que você voltou!</h1>
-                        <div class="mb-3 input-box">
+                        <div class="mb-3">
                             <label for="inputEmail" class="form-label fw-semibold">EMAIL</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="nome@seuemail.com" required>
+                            <input type="email" class="form-control" id="inputEmail" required>
                         </div>
 
-                        <div class="mb-3 input-box">
+                        <div class="mb-3">
                             <label for="inputSenha" class="form-label fw-semibold">SENHA</label>
-                            <input type="password" class="form-control" id="inputSenha" required>
-                            <iconify-icon icon="heroicons-solid:eye"></iconify-icon>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="inputSenha" required>
+                                <button type="button" id="toggleSenha" class="input-group-text">
+                                    <iconify-icon icon="heroicons-solid:eye" id="iconeSenha"></iconify-icon>
+                                </button>
+                            </div>
                         </div>
 
                         <button class="btn btn-login btn-primary w-100 mb-3 fw-semibold">Entrar</button>
@@ -60,7 +64,7 @@
             </div>
         </div>
    </div>
-
-    <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/login.js"></script>
+   <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
