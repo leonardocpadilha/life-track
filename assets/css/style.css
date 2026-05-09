@@ -11885,4 +11885,9 @@ body {
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
 }
 
+.input-group-text {
+  background-color: #F2F4F6;
+  border: none;
+}
+
 /*# sourceMappingURL=style.css.map */

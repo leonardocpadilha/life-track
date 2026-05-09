@@ -17,3 +17,8 @@ body {
         box-shadow: $shadow-lg;
     }
 }
+
+.input-group-text {
+    background-color: $lt-cinza-suave;
+    border: none;
+}
