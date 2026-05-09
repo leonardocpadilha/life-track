@@ -55,15 +55,18 @@ $headings-font-family: 'Outfit', sans-serif;
 
 //Pesos de Fontes
 $font-weight-light: 300;
-$font-weight-regular: 400;
+$font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+// Bootstrap headings
+$headings-font-weight: $font-weight-bold;
+
 //---------------------------------------------------------------------------
 //SOMBRAS
 //---------------------------------------------------------------------------
-$shadow-lg: 0 4px 6px rgba(80, 174, 242, 0.2);
+$shadow-lg: 0 4px 6px rgba(80, 174, 242, 0.3);
 
 //---------------------------------------------------------------------------
 //VARIÁVEIS DO BOOTSTRAP
