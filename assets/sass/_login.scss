@@ -9,12 +9,15 @@ body {
         border: none;
     }
     .btn-login {
-        font-weight: 600;
         color: $lt-branco;
         box-shadow: $shadow-lg;
     }
     .btn-login-social {
+        font-weight: 500;
         box-shadow: $shadow-lg;
+    }
+    .form-check-input {
+    border: 1px solid $lt-cinza-medio;
     }
 }
 
@@ -25,4 +28,14 @@ body {
 
 .card.p-4 {
     border-radius: 15px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-concordo {
+    color: $lt-branco;
+    box-shadow: $shadow-lg;
 }

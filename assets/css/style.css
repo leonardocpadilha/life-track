@@ -11877,12 +11877,15 @@ body {
   border: none;
 }
 .form-login .btn-login {
-  font-weight: 600;
   color: #FFFFFF;
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
 }
 .form-login .btn-login-social {
+  font-weight: 500;
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
+}
+.form-login .form-check-input {
+  border: 1px solid #767586;
 }
 
 .input-group-text {
@@ -11892,6 +11895,16 @@ body {
 
 .card.p-4 {
   border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-concordo {
+  color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */
