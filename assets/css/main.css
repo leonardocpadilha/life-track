@@ -11868,7 +11868,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Outfit", sans-serif;
 }
 
-body {
+.auth-page {
   background-color: #50AFF2;
 }
 
@@ -11907,4 +11907,8 @@ a {
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
 }
 
-/*# sourceMappingURL=style.css.map */
+.novo-momento-page {
+  background-color: #F8F8F8;
+}
+
+/*# sourceMappingURL=main.css.map */
