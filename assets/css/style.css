@@ -11890,4 +11890,8 @@ body {
   border: none;
 }
 
+.card.p-4 {
+  border-radius: 15px;
+}
+
 /*# sourceMappingURL=style.css.map */
