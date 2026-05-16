@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <div class="container vh-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
+          <img
+            src="/assets/img/logos/logo-secundario.webp"
+            alt="logo da aplicação"
+            class="img-fluid"
+          />
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card p-4">
+            <form class="form-login">
+              <h1 class="mb-3 text-dark">
+                Crie uma conta e comece a registrar seus momentos!
+              </h1>
+
+              <div class="mb-3">
+                <label for="inputName" class="form-label fw-semibold"
+                  >NOME COMPLETO*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputName"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="inputEmail" class="form-label fw-semibold"
+                  >EMAIL*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="inputSenha" class="form-label fw-semibold"
+                  >SENHA*</label
+                >
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputSenha"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="toggleSenha"
+                    class="input-group-text"
+                  >
+                    <iconify-icon
+                      icon="heroicons-solid:eye"
+                      id="iconeSenha"
+                    ></iconify-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="inputSenha" class="form-label fw-semibold"
+                  >REPITA A SENHA*</label
+                >
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputSenha"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="toggleSenha"
+                    class="input-group-text"
+                  >
+                    <iconify-icon
+                      icon="heroicons-solid:eye"
+                      id="iconeSenha"
+                    ></iconify-icon>
+                  </button>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-login btn-primary w-100 mb-3 fw-semibold text-white"
+              >
+                Cadastrar
+              </button>
+
+              <div class="form-check text-center mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="checkTermos"
+                  required
+                />
+
+                <label class="form-check-label" for="checkTermos">
+                  Ao continuar, você concorda com nossa
+
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPoliticaPrivacidade"
+                  >
+                    Política de Privacidade</a
+                  >,
+
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPoliticaCookies"
+                  >
+                    Política de Cookies
+                  </a>
+
+                  e
+
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalTermosCondicoes"
+                  >
+                    Termos e Condições</a
+                  >.
+                </label>
+              </div>
+
+              <p class="mb-0 text-center">
+                Já faz parte? <a href="login.html">Faça login</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalPoliticaPrivacidade"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="modalPoliticaPrivacidadeLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Política de Privacidade</h1>
+          </div>
+          <div class="modal-body">
+            <p><strong>Última atualização:</strong> 16 de maio de 2026</p>
+
+            <p>
+              Bem-vindo ao LifeTrack. Esta Política de Privacidade explica como
+              coletamos, utilizamos, armazenamos e protegemos os dados dos
+              usuários da plataforma.
+            </p>
+
+            <p>
+              O LifeTrack é uma aplicação voltada ao registro de momentos,
+              metas, memórias, hábitos e experiências pessoais.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">1. Dados que coletamos</h2>
+
+            <h3 class="fs-5 mt-4">1.1 Dados fornecidos pelo usuário</h3>
+
+            <ul>
+              <li>Nome;</li>
+              <li>E-mail;</li>
+              <li>Senha criptografada;</li>
+              <li>Foto de perfil;</li>
+              <li>Registros, hábitos, metas e retrospectivas;</li>
+              <li>Imagens e mídias enviadas;</li>
+              <li>Localizações adicionadas voluntariamente;</li>
+              <li>Preferências de uso.</li>
+            </ul>
+
+            <h3 class="fs-5 mt-4">1.2 Dados coletados automaticamente</h3>
+
+            <ul>
+              <li>Endereço IP;</li>
+              <li>Tipo de dispositivo e navegador;</li>
+              <li>Sistema operacional;</li>
+              <li>Data e horário de acesso;</li>
+              <li>Informações de navegação;</li>
+              <li>Cookies e tecnologias semelhantes;</li>
+              <li>Logs de acesso e uso.</li>
+            </ul>
+
+            <hr />
+
+            <h2 class="fs-4">2. Como utilizamos seus dados</h2>
+
+            <ul>
+              <li>Permitir funcionamento da plataforma;</li>
+              <li>Personalizar a experiência do usuário;</li>
+              <li>Gerar retrospectivas e estatísticas;</li>
+              <li>Melhorar funcionalidades e desempenho;</li>
+              <li>Garantir segurança e prevenção contra fraudes;</li>
+              <li>Cumprir obrigações legais.</li>
+            </ul>
+
+            <hr />
+
+            <h2 class="fs-4">3. Compartilhamento de dados</h2>
+
+            <p>
+              O LifeTrack não vende dados pessoais. Os dados poderão ser
+              compartilhados apenas quando necessário para funcionamento da
+              plataforma, cumprimento legal ou mediante autorização do usuário.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">4. Armazenamento e segurança</h2>
+
+            <p>
+              Adotamos medidas técnicas e organizacionais razoáveis para
+              proteger os dados contra acessos não autorizados, vazamentos ou
+              alterações indevidas.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">5. Retenção de dados</h2>
+
+            <p>
+              Os dados serão armazenados enquanto a conta estiver ativa ou pelo
+              período necessário para cumprimento de obrigações legais.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">6. Direitos do usuário</h2>
+
+            <ul>
+              <li>Acesso aos dados pessoais;</li>
+              <li>Correção de informações;</li>
+              <li>Exclusão de dados;</li>
+              <li>Portabilidade;</li>
+              <li>Revogação de consentimento.</li>
+            </ul>
+
+            <hr />
+
+            <h2 class="fs-4">7. Conteúdo do usuário</h2>
+
+            <p>
+              O usuário é responsável pelos conteúdos publicados ou armazenados
+              na plataforma.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">8. Serviços de terceiros</h2>
+
+            <p>
+              O LifeTrack poderá utilizar serviços externos para armazenamento,
+              autenticação e funcionalidades complementares.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">9. Transferência internacional de dados</h2>
+
+            <p>
+              Alguns serviços poderão processar dados fora do Brasil, sempre
+              buscando medidas adequadas de proteção.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">10. Alterações nesta Política</h2>
+
+            <p>Esta Política poderá ser alterada periodicamente.</p>
+
+            <hr />
+
+            <h2 class="fs-4">11. Contato</h2>
+
+            <p><strong>E-mail:</strong> contato@lifetrack.app</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-concordo btn-primary w-100 mb-3 fw-semibold"
+              data-bs-dismiss="modal"
+            >
+              Li e Concordo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalPoliticaCookies"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="modalPoliticaCookies"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Política de Cookies</h1>
+          </div>
+          <div class="modal-body">
+            <p><strong>Última atualização:</strong> 16 de maio de 2026</p>
+
+            <p>
+              Esta Política de Cookies explica como o LifeTrack utiliza cookies
+              e tecnologias semelhantes.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">1. O que são cookies</h2>
+
+            <p>
+              Cookies são pequenos arquivos armazenados no dispositivo do
+              usuário para melhorar navegação, desempenho e experiência de uso.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">2. Como utilizamos cookies</h2>
+
+            <ul>
+              <li>Manter sessões autenticadas;</li>
+              <li>Lembrar preferências;</li>
+              <li>Melhorar desempenho;</li>
+              <li>Analisar uso da plataforma;</li>
+              <li>Garantir segurança.</li>
+            </ul>
+
+            <hr />
+
+            <h2 class="fs-4">3. Tipos de cookies utilizados</h2>
+
+            <h3 class="fs-5 mt-4">3.1 Cookies essenciais</h3>
+
+            <p>Necessários para funcionamento básico da plataforma.</p>
+
+            <h3 class="fs-5 mt-4">3.2 Cookies de desempenho</h3>
+
+            <p>Utilizados para métricas e análise de utilização.</p>
+
+            <h3 class="fs-5 mt-4">3.3 Cookies de funcionalidade</h3>
+
+            <p>Permitem lembrar preferências e configurações.</p>
+
+            <h3 class="fs-5 mt-4">3.4 Cookies de terceiros</h3>
+
+            <p>Alguns serviços integrados poderão utilizar cookies próprios.</p>
+
+            <hr />
+
+            <h2 class="fs-4">4. Gerenciamento de cookies</h2>
+
+            <p>
+              O usuário pode bloquear ou remover cookies pelo navegador, embora
+              algumas funcionalidades possam deixar de funcionar corretamente.
+            </p>
+
+            <hr />
+
+            <h2 class="fs-4">5. Alterações nesta Política</h2>
+
+            <p>Esta Política poderá ser atualizada periodicamente.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-concordo btn-primary w-100 mb-3 fw-semibold"
+              data-bs-dismiss="modal"
+            >
+              Li e Concordo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalTermosCondicoes"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="modalTermosCondicoes"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Termos e Condições</h1>
+          </div>
+          <div class="modal-body">
+            <p><strong>Última atualização:</strong> 16 de maio de 2026</p>
+
+            <hr>
+
+                <h2 class="fs-4">1. Sobre o LifeTrack</h2>
+
+                <p>
+                    O LifeTrack é uma plataforma digital destinada ao registro,
+                    organização e acompanhamento de experiências pessoais.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">2. Cadastro e acesso</h2>
+
+                <p>
+                    Para utilizar determinadas funcionalidades poderá ser necessário
+                    criar uma conta.
+                </p>
+
+                <ul>
+                    <li>Fornecer informações verdadeiras;</li>
+                    <li>Manter credenciais seguras;</li>
+                    <li>Não compartilhar acesso;</li>
+                    <li>Responsabilizar-se pelas atividades realizadas na conta.</li>
+                </ul>
+
+                <hr>
+
+                <h2 class="fs-4">3. Uso permitido</h2>
+
+                <ul>
+                    <li>Não violar leis ou regulamentos;</li>
+                    <li>Não explorar vulnerabilidades;</li>
+                    <li>Não distribuir malware;</li>
+                    <li>Não utilizar a plataforma para fraudes.</li>
+                </ul>
+
+                <hr>
+
+                <h2 class="fs-4">4. Conteúdo do usuário</h2>
+
+                <p>
+                    O usuário mantém os direitos sobre os conteúdos enviados ao LifeTrack.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">5. Disponibilidade do serviço</h2>
+
+                <p>
+                    O LifeTrack poderá atualizar funcionalidades, realizar manutenções
+                    e alterar recursos.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">6. Limitação de responsabilidade</h2>
+
+                <p>
+                    O LifeTrack não será responsável por perdas decorrentes de
+                    indisponibilidade, falhas externas ou uso indevido da plataforma.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">7. Propriedade intelectual</h2>
+
+                <p>
+                    Marca, design, código e funcionalidades da plataforma são protegidos
+                    pela legislação aplicável.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">8. Encerramento de conta</h2>
+
+                <p>
+                    O usuário poderá solicitar encerramento da conta a qualquer momento.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">9. Alterações dos Termos</h2>
+
+                <p>
+                    Estes Termos poderão ser atualizados periodicamente.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">10. Legislação aplicável</h2>
+
+                <p>
+                    Estes Termos serão regidos pelas leis da República Federativa do Brasil.
+                </p>
+
+                <hr>
+
+                <h2 class="fs-4">11. Contato</h2>
+
+                <p>
+                    <strong>E-mail:</strong> contato@lifetrack.app
+                </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-concordo btn-primary w-100 mb-3 fw-semibold"
+              data-bs-dismiss="modal"
+            >
+              Li e Concordo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+    <script
+      defer
+      src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>
