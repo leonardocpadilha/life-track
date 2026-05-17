@@ -1,3 +1,19 @@
 .novo-momento-page {
     background-color: $lt-branco-suave;
 }
+
+footer {
+    border-radius: 14px 14px 0 0;
+
+    p {
+        font-weight: 600;
+        color: $lt-branco;
+    }
+    .small {
+        font-weight: 400;
+    }
+}
+
+.img-fluid {
+    max-width: 220px;
+}

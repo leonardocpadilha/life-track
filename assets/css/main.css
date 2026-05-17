@@ -11911,4 +11911,19 @@ a {
   background-color: #F8F8F8;
 }
 
+footer {
+  border-radius: 14px 14px 0 0;
+}
+footer p {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+footer .small {
+  font-weight: 400;
+}
+
+.img-fluid {
+  max-width: 220px;
+}
+
 /*# sourceMappingURL=main.css.map */
