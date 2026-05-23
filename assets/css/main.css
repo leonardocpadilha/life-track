@@ -11932,13 +11932,30 @@ a {
 .form-novo-momento {
   background-color: #FFFFFF;
   border-radius: 15px;
+  max-width: 950px;
+  width: 100%;
 }
 .form-novo-momento input {
   background-color: #F2F4F6;
   border: none;
+  color: #000000;
+}
+.form-novo-momento input::placeholder {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.form-novo-momento .upload-text {
+  color: #767586;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.form-novo-momento textarea::placeholder {
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
 .form-novo-momento textarea {
   background-color: #F2F4F6;
+  color: #000000;
   border: none;
   height: 100%;
   resize: none;

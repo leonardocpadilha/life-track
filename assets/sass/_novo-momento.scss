@@ -4,14 +4,34 @@
 .form-novo-momento {
     background-color: $lt-branco;
     border-radius: 15px;
+    max-width: 950px; 
+    width: 100%;
 
     input {
         background-color: $lt-cinza-suave;
         border: none;
+        color: $lt-preto;
+
+        &::placeholder {
+        font-size: 0.85rem;
+        opacity: 0.7;
+        }
+    }
+
+    .upload-text {
+        color: $lt-cinza-medio;
+        font-size: 0.85rem;
+        opacity: 0.7;
+    }
+
+    textarea::placeholder {
+        font-size: 0.85rem;
+        opacity: 0.7;
     }
 
     textarea {
         background-color: $lt-cinza-suave;
+        color: $lt-preto;
         border: none;
         height: 100%; 
         resize: none;
