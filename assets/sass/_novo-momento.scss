@@ -1,6 +1,24 @@
 .novo-momento-page {
     background-color: $lt-branco-suave;
 }
+.form-novo-momento {
+    background-color: $lt-branco;
+    border-radius: 15px;
+
+    input {
+        background-color: $lt-cinza-suave;
+        border: none;
+    }
+}
+
+#inputImage {
+    //min-height: 300px;
+    border: dashed 2px $lt-azul-primario;
+}
+
+#inputDescricao{
+    //min-height: 300px;
+}
 
 footer {
     border-radius: 14px 14px 0 0;

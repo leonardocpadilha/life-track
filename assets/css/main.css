@@ -11911,6 +11911,19 @@ a {
   background-color: #F8F8F8;
 }
 
+.form-novo-momento {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+.form-novo-momento input {
+  background-color: #F2F4F6;
+  border: none;
+}
+
+#inputImage {
+  border: dashed 2px #50AFF2;
+}
+
 footer {
   border-radius: 14px 14px 0 0;
 }
