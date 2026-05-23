@@ -27,8 +27,70 @@
 
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
-  <body class="novo-momento-page d-flex flex-column min-vh-100">
-    <p>teste</p>
+
+  <body class="novo-momento-page">
+    <main class="d-flex justify-content-center align-items-center min-vh-100">
+      <form class="form-novo-momento">
+        <div class="container">
+          <div class="row h-100 align-items-stretch">
+            <div class="col-5">
+              <div class="card-pre-imagem h-100">
+                <label for="inputImage" class="form-label fw-semibold"
+                  >PRÉ-VISUALIZAÇÃO DE IMAGEM</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="inputImage"
+                  placeholder="Quer guardar uma imagem desse momento?"
+                />
+              </div>
+            </div>
+            <div class="col-7">
+              <div class="row">
+                <div class="col-8">
+                  <label for="inputTitle" class="form-label fw-semibold"
+                    >TÍTULO</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputTitle"
+                    placeholder="Como você chamaria esse momento?"
+                    required
+                  />
+                </div>
+                <div class="col-4 mb-3">
+                  <label for="inputDate" class="form-label fw-semibold"
+                    >DATA</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="inputDate"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label for="inputDescricao" class="form-label fw-semibold"
+                    >DESCRIÇÃO</label
+                  >
+                  <textarea
+                    name="inputDescricao"
+                    id="inputDescricao"
+                    class="form-control"
+                    rows="8"
+                    placeholder="Conte um pouco mais sobre esse momento..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
 
     <footer class="bg-primary mt-auto py-4">
       <div class="container">
