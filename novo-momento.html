@@ -31,25 +31,63 @@
   <body class="novo-momento-page">
     <main class="d-flex justify-content-center align-items-center min-vh-100">
       <form class="form-novo-momento">
-        <div class="container">
-          <div class="row h-100 align-items-stretch">
-            <div class="col-5">
-              <div class="card-pre-imagem h-100">
-                <label for="inputImage" class="form-label fw-semibold"
+        <div class="container content-area p-4">
+          <div class="row align-items-stretch">
+            <div class="col-12 col-md-12 col-lg-5 d-flex flex-column justify-content-between">
+              <div class="card-pre-imagem flex-grow-1 d-flex flex-column">
+                <label for="inputImage" class="form-label fw-semibold mb-2"
                   >PRÉ-VISUALIZAÇÃO DE IMAGEM</label
                 >
-                <input
-                  type="file"
-                  class="form-control"
-                  id="inputImage"
-                  placeholder="Quer guardar uma imagem desse momento?"
-                />
+
+                <div class="upload-area flex-grow-1">
+                  <p class="upload-text">
+                    Quer guardar uma imagem desse momento?
+                  </p>
+
+                  <iconify-icon
+                    icon="material-symbols:cloud-upload"
+                  ></iconify-icon>
+
+                  <input
+                    type="file"
+                    class="form-control d-none"
+                    id="inputImage"
+                    accept="image/*"
+                  />
+                  <label for="inputImage" class="btn btn-lt-primary px-4"
+                    >Upload de Imagem</label
+                  >
+                </div>
+              </div>
+
+              <div
+                class="more-info d-flex justify-content-center align-items-center gap-3 mt-3"
+              >
+                <button class="btn-lt-icon">
+                  <iconify-icon
+                    icon="material-symbols:bookmark-add"
+                  ></iconify-icon>
+                </button>
+                <button class="btn-lt-icon">
+                  <iconify-icon icon="material-symbols:numbers"></iconify-icon>
+                </button>
+                <button class="btn-lt-icon">
+                  <iconify-icon
+                    icon="material-symbols:add-reaction"
+                  ></iconify-icon>
+                </button>
+                <button class="btn-lt-icon">
+                  <iconify-icon
+                    icon="material-symbols:add-location-alt"
+                  ></iconify-icon>
+                </button>
               </div>
             </div>
-            <div class="col-7">
-              <div class="row">
-                <div class="col-8">
-                  <label for="inputTitle" class="form-label fw-semibold"
+
+            <div class="col-12 col-md-12 col-lg-7 d-flex flex-column justify-content-between">
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-md-8 col-lg-8">
+                  <label for="inputTitle" class="form-label fw-semibold mb-2"
                     >TÍTULO</label
                   >
                   <input
@@ -60,8 +98,8 @@
                     required
                   />
                 </div>
-                <div class="col-4 mb-3">
-                  <label for="inputDate" class="form-label fw-semibold"
+                <div class="col-12 col-md-4 col-lg-4">
+                  <label for="inputDate" class="form-label fw-semibold mb-2"
                     >DATA</label
                   >
                   <input
@@ -72,19 +110,23 @@
                   />
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12 mb-3">
-                  <label for="inputDescricao" class="form-label fw-semibold"
-                    >DESCRIÇÃO</label
-                  >
-                  <textarea
-                    name="inputDescricao"
-                    id="inputDescricao"
-                    class="form-control"
-                    rows="8"
-                    placeholder="Conte um pouco mais sobre esse momento..."
-                  ></textarea>
-                </div>
+
+              <div class="d-flex flex-column flex-grow-1 mb-3">
+                <label for="inputDescricao" class="form-label fw-semibold mb-2"
+                  >DESCRIÇÃO</label
+                >
+                <textarea
+                  name="inputDescricao"
+                  id="inputDescricao"
+                  class="form-control flex-grow-1"
+                  placeholder="Conte um pouco mais sobre esse momento..."
+                ></textarea>
+              </div>
+
+              <div>
+                <button class="btn btn-lt-primary w-100">
+                  Registrar momento
+                </button>
               </div>
             </div>
           </div>
