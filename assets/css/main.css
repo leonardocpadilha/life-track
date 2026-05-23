@@ -11868,6 +11868,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Outfit", sans-serif;
 }
 
+.btn-lt-primary {
+  background-color: #50AFF2;
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
+}
+.btn-lt-primary:hover {
+  background-color: #50AFF2;
+  color: #FFFFFF;
+}
+
+.btn-lt-icon {
+  border: none;
+  background-color: #FFFFFF;
+}
+
+.content-area {
+  background-color: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(70, 69, 84, 0.3);
+  border-radius: 15px;
+}
+
 .auth-page {
   background-color: #50AFF2;
 }
@@ -11875,10 +11897,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .form-login input {
   background-color: #F2F4F6;
   border: none;
-}
-.form-login .btn-login {
-  color: #FFFFFF;
-  box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
 }
 .form-login .btn-login-social {
   font-weight: 500;
@@ -11919,9 +11937,16 @@ a {
   background-color: #F2F4F6;
   border: none;
 }
+.form-novo-momento textarea {
+  background-color: #F2F4F6;
+  border: none;
+  height: 100%;
+  resize: none;
+}
 
-#inputImage {
-  border: dashed 2px #50AFF2;
+.btn-lt-icon iconify-icon {
+  color: #50AFF2;
+  font-size: 32px;
 }
 
 footer {
@@ -11937,6 +11962,27 @@ footer .small {
 
 .img-fluid {
   max-width: 220px;
+}
+
+.upload-area {
+  border: 2px dashed #50AFF2;
+  border-radius: 16px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #F8F8F8;
+}
+.upload-area iconify-icon {
+  color: #50AFF2;
+  font-size: 60px;
+}
+
+.upload-icon {
+  font-size: 42px;
+  color: #50AFF2;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -8,13 +8,9 @@
         background-color: $lt-cinza-suave;
         border: none;
     }
-    .btn-login {
-        color: $lt-branco;
-        box-shadow: $shadow-lg;
-    }
     .btn-login-social {
         font-weight: 500;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadow-btn;
     }
     .form-check-input {
     border: 1px solid $lt-cinza-medio;
@@ -37,5 +33,5 @@ a {
 
 .btn-concordo {
     color: $lt-branco;
-    box-shadow: $shadow-lg;
+    box-shadow: $shadow-btn;
 }
