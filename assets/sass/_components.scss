@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------------
+//BUTTONS
+//---------------------------------------------------------------------------
+.btn-lt-primary {
+    background-color: $lt-azul-primario;
+    color: $lt-branco;
+    font-weight: $font-weight-semibold;
+    box-shadow: $shadow-btn;
+
+    &:hover {
+        background-color: $lt-azul-primario;
+        color: $lt-branco;
+    }
+}
+
+.btn-lt-icon {
+    border: none;
+    background-color: $lt-branco;
+}
+
+//---------------------------------------------------------------------------
+//CONTAINERS
+//---------------------------------------------------------------------------
+.content-area {
+    background-color: $lt-branco;
+    box-shadow: $shadow-area;
+    border-radius: 15px;
+}
