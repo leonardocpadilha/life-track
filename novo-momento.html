@@ -29,11 +29,86 @@
   </head>
 
   <body class="novo-momento-page">
-    <nav class="navbar">
-      
+    <nav class="navbar navbar-lt rounded-pill p-0">
+      <div class="container">
+        <div class="logo">
+          <a class="navbar-brand m-0" href="#">
+            <img
+              src="/assets/img/logos/logo-primario.webp"
+              alt="Logo LifeTrack"
+              width="150"
+            />
+          </a>
+        </div>
+        <div class="links d-none d-md-flex">
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item mx-3">
+              <a class="nav-link active d-flex flex-column align-items-center" href="novo-momento.html">
+                <iconify-icon
+                    icon="material-symbols:add-box"
+                ></iconify-icon>
+                Registrar
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link d-flex flex-column align-items-center" href="#">
+                <iconify-icon
+                    icon="material-symbols:calendar-clock"
+                ></iconify-icon>
+                Timeline
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link d-flex flex-column align-items-center" href="#">
+                <iconify-icon
+                    icon="material-symbols:chart-data"
+                ></iconify-icon>
+                Jornada
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="user">
+          <button class="btn rounded-pill btn-lt-user d-flex align-items-center gap-2">
+            <div class="avatar-circle rounded-circle">
+              <iconify-icon 
+              icon="fa6-solid:user"
+              ></iconify-icon>
+            </div>
+            <span class="user-name">Usuário</span>
+          </button>
+        </div>
+      </div>
     </nav>
 
-    <main class="d-flex justify-content-center align-items-center min-vh-100 p-3 p-md-0">
+    <nav class="navbar navbar-lt-mobile rounded-pill fixed-bottom d-flex d-md-none p-0">
+      <div class="container justify-content-center">
+        <ul class="navbar-nav d-flex flex-row justify-content-around w-100 m-0 p-0">
+          <li class="nav-item text-center">
+            <a class="nav-link active d-flex flex-column align-items-center" href="novo-momento.html">
+              <iconify-icon icon="material-symbols:add-box" class="fs-3"></iconify-icon>
+              Registrar
+            </a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <iconify-icon icon="material-symbols:calendar-clock" class="fs-3"></iconify-icon>
+              Timeline
+            </a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <iconify-icon icon="material-symbols:chart-data" class="fs-3"></iconify-icon>
+              Jornada
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main
+      class="d-flex justify-content-center align-items-center min-vh-100 p-3 p-lg-0"
+    >
       <form class="form-novo-momento w-100">
         <div class="container content-area p-4">
           <div class="row align-items-stretch">
