@@ -18,6 +18,30 @@
     background-color: $lt-branco;
 }
 
+.btn-lt-user {
+    background-color: $lt-azul-primario;
+    padding: 4px 12px 4px 6px;
+
+    &:hover {
+        background-color: $lt-azul-primario;
+        color: $lt-branco;
+    }
+
+    .avatar-circle {
+      width: 32px;
+      height: 32px;
+      background-color: $lt-branco;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .user-name {
+        color: $lt-branco;
+        font-weight: 500;
+    }
+}
+
 //---------------------------------------------------------------------------
 //CONTAINERS
 //---------------------------------------------------------------------------
@@ -25,4 +49,55 @@
     background-color: $lt-branco;
     box-shadow: $shadow-area;
     border-radius: 15px;
+}
+
+//---------------------------------------------------------------------------
+//NAVBAR
+//---------------------------------------------------------------------------
+.navbar-lt {
+    background-color: $lt-branco-suave;
+    margin: 16px auto 0 auto;
+    max-width: 1200px;
+
+    .nav-link {
+        color: $lt-cinza-escuro;
+
+        iconify-icon {
+        font-size: 32px;
+        }
+    
+        &.active {
+            color: $lt-azul-primario;
+            font-weight: $font-weight-semibold;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-lt {
+        background-color: $lt-branco;
+        box-shadow: $shadow-navbar;
+        border-radius: 24px;
+        width: calc(100% - 32px);
+    }
+}
+
+.navbar-lt-mobile {
+    background-color: $lt-branco;
+    box-shadow: $shadow-navbar;
+    margin: 0 auto 16px auto;
+    min-width: 300px;
+
+    .nav-link {
+        color: $lt-cinza-escuro;
+
+        iconify-icon {
+        font-size: 32px;
+        }
+    
+        &.active {
+            color: $lt-azul-primario;
+            font-weight: $font-weight-semibold;
+        }
+    }
 }
