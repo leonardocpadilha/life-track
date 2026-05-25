@@ -1,9 +1,8 @@
-.novo-momento-page {
+.new-moment-page {
     background-color: $lt-branco-suave;
 }
-.form-novo-momento {
-    background-color: $lt-branco;
-    border-radius: 15px;
+
+.new-moment-form {
     max-width: 950px; 
     width: 100%;
 
@@ -11,20 +10,10 @@
         background-color: $lt-cinza-suave;
         border: none;
         color: $lt-preto;
-
-        &::placeholder {
-        font-size: 0.85rem;
-        opacity: 0.7;
-        }
     }
 
     .upload-text {
-        color: $lt-cinza-medio;
-        font-size: 0.85rem;
-        opacity: 0.7;
-    }
-
-    textarea::placeholder {
+        color: $lt-cinza-escuro;
         font-size: 0.85rem;
         opacity: 0.7;
     }
@@ -36,29 +25,6 @@
         height: 100%; 
         resize: none;
     }
-}
-
-.btn-lt-icon {
-    iconify-icon {
-        color: $lt-azul-primario;
-        font-size: 32px;
-    }
-}
-
-footer {
-    border-radius: 14px 14px 0 0;
-
-    p {
-        font-weight: 600;
-        color: $lt-branco;
-    }
-    .small {
-        font-weight: 400;
-    }
-}
-
-.img-fluid {
-    max-width: 220px;
 }
 
 .upload-area {
@@ -86,4 +52,20 @@ footer {
 .upload-icon {
     font-size: 42px;
     color: $lt-azul-primario;
+}
+
+input,
+textarea {
+
+    &::placeholder {
+        font-size: 0.85rem;
+        opacity: 0.7;
+    }
+}
+
+.dropdown-menu {
+    border: 1px solid $lt-azul-primario;
+    border-radius: 18px;
+    box-shadow: $shadow-navbar;
+    background-color: $lt-branco;
 }

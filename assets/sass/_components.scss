@@ -16,6 +16,11 @@
 .btn-lt-icon {
     border: none;
     background-color: $lt-branco;
+
+    iconify-icon {
+        color: $lt-azul-primario;
+        font-size: 32px;
+    }
 }
 
 .btn-lt-user {
@@ -82,17 +87,25 @@
     }
 }
 
+//Mobile
 .navbar-lt-mobile {
     background-color: $lt-branco;
     box-shadow: $shadow-navbar;
-    margin: 0 auto 16px auto;
-    min-width: 300px;
+
+    position: fixed;
+    bottom: 16px;
+
+    left: 16px;
+    right: 16px;
+
+    z-index: 1050;
 
     .nav-link {
         color: $lt-cinza-escuro;
+        font-size: 12px;
 
         iconify-icon {
-        font-size: 32px;
+        font-size: 28px;
         }
     
         &.active {
@@ -100,4 +113,36 @@
             font-weight: $font-weight-semibold;
         }
     }
+}
+
+//---------------------------------------------------------------------------
+//FOOTER
+//---------------------------------------------------------------------------
+.footer-lt {
+    background-color: $lt-azul-primario;
+    border-radius: 14px 14px 0 0;
+
+    p {
+        font-weight: 600;
+        color: $lt-branco;
+    }
+
+    .small {
+        font-weight: 400;
+    }
+
+    .footer-link {
+        color: $lt-branco;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            color: $lt-branco;
+            opacity: 0.8;
+        }
+    }
+}
+
+.footer-logo {
+    max-width: 220px;
 }
