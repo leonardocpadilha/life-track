@@ -28,10 +28,10 @@
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
 
-  <body class="novo-momento-page">
+  <body class="new-moment-page">
     <nav class="navbar navbar-lt rounded-pill p-0">
       <div class="container">
-        <div class="logo">
+        <div class="navbar-logo">
           <a class="navbar-brand m-0" href="#">
             <img
               src="/assets/img/logos/logo-primario.webp"
@@ -40,40 +40,45 @@
             />
           </a>
         </div>
-        <div class="links d-none d-md-flex">
+        <div class="navbar-links d-none d-md-flex">
           <ul class="navbar-nav d-flex flex-row">
             <li class="nav-item mx-3">
-              <a class="nav-link active d-flex flex-column align-items-center" href="novo-momento.html">
-                <iconify-icon
-                    icon="material-symbols:add-box"
-                ></iconify-icon>
+              <a
+                class="nav-link active d-flex flex-column align-items-center"
+                href="novo-momento.html"
+              >
+                <iconify-icon icon="material-symbols:add-box"></iconify-icon>
                 Registrar
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link d-flex flex-column align-items-center" href="#">
+              <a
+                class="nav-link d-flex flex-column align-items-center"
+                href="#"
+              >
                 <iconify-icon
-                    icon="material-symbols:calendar-clock"
+                  icon="material-symbols:calendar-clock"
                 ></iconify-icon>
                 Timeline
               </a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link d-flex flex-column align-items-center" href="#">
-                <iconify-icon
-                    icon="material-symbols:chart-data"
-                ></iconify-icon>
+              <a
+                class="nav-link d-flex flex-column align-items-center"
+                href="#"
+              >
+                <iconify-icon icon="material-symbols:chart-data"></iconify-icon>
                 Jornada
               </a>
             </li>
           </ul>
         </div>
-        <div class="user">
-          <button class="btn rounded-pill btn-lt-user d-flex align-items-center gap-2">
+        <div class="navbar-user">
+          <button
+            class="btn rounded-pill btn-lt-user d-flex align-items-center gap-2"
+          >
             <div class="avatar-circle rounded-circle">
-              <iconify-icon 
-              icon="fa6-solid:user"
-              ></iconify-icon>
+              <iconify-icon icon="fa6-solid:user"></iconify-icon>
             </div>
             <span class="user-name">Usuário</span>
           </button>
@@ -81,24 +86,44 @@
       </div>
     </nav>
 
-    <nav class="navbar navbar-lt-mobile rounded-pill fixed-bottom d-flex d-md-none p-0">
+    <nav class="navbar navbar-lt-mobile rounded-pill d-flex d-md-none p-0">
       <div class="container justify-content-center">
-        <ul class="navbar-nav d-flex flex-row justify-content-around w-100 m-0 p-0">
+        <ul
+          class="navbar-nav d-flex flex-row justify-content-around w-100 m-0 p-0"
+        >
           <li class="nav-item text-center">
-            <a class="nav-link active d-flex flex-column align-items-center" href="novo-momento.html">
-              <iconify-icon icon="material-symbols:add-box" class="fs-3"></iconify-icon>
+            <a
+              class="nav-link active d-flex flex-column align-items-center"
+              href="novo-momento.html"
+            >
+              <iconify-icon
+                icon="material-symbols:add-box"
+                class="fs-3"
+              ></iconify-icon>
               Registrar
             </a>
           </li>
           <li class="nav-item text-center">
-            <a class="nav-link d-flex flex-column align-items-center" href="#">
-              <iconify-icon icon="material-symbols:calendar-clock" class="fs-3"></iconify-icon>
+            <a
+              class="nav-link d-flex flex-column align-items-center"
+              href="timeline.html"
+            >
+              <iconify-icon
+                icon="material-symbols:calendar-clock"
+                class="fs-3"
+              ></iconify-icon>
               Timeline
             </a>
           </li>
           <li class="nav-item text-center">
-            <a class="nav-link d-flex flex-column align-items-center" href="#">
-              <iconify-icon icon="material-symbols:chart-data" class="fs-3"></iconify-icon>
+            <a
+              class="nav-link d-flex flex-column align-items-center"
+              href="jornada.html"
+            >
+              <iconify-icon
+                icon="material-symbols:chart-data"
+                class="fs-3"
+              ></iconify-icon>
               Jornada
             </a>
           </li>
@@ -109,13 +134,13 @@
     <main
       class="d-flex justify-content-center align-items-center min-vh-100 p-3 p-lg-0"
     >
-      <form class="form-novo-momento w-100">
-        <div class="container content-area p-4">
+      <form class="new-moment-form w-100">
+        <section class="container content-area p-4">
           <div class="row align-items-stretch">
             <div
-              class="col-12 col-md-12 col-lg-5 d-flex flex-column justify-content-between"
+              class="col-12 col-lg-5 d-flex flex-column justify-content-between"
             >
-              <div class="card-pre-imagem flex-grow-1 d-flex flex-column">
+              <div class="image-preview-card flex-grow-1 d-flex flex-column">
                 <label for="inputImage" class="form-label fw-semibold mb-2"
                   >PRÉ-VISUALIZAÇÃO DE IMAGEM</label
                 >
@@ -142,7 +167,7 @@
               </div>
 
               <div
-                class="more-info d-flex justify-content-center align-items-center gap-3 mt-3"
+                class="moment-actions d-flex justify-content-center align-items-center gap-3 mt-3"
               >
                 <button class="btn-lt-icon">
                   <iconify-icon
@@ -152,11 +177,37 @@
                 <button class="btn-lt-icon">
                   <iconify-icon icon="material-symbols:numbers"></iconify-icon>
                 </button>
-                <button class="btn-lt-icon">
-                  <iconify-icon
-                    icon="material-symbols:add-reaction"
-                  ></iconify-icon>
-                </button>
+
+                <div class="dropdown" data-bs-auto-close="outside">
+                  <button
+                    type="button"
+                    class="btn-lt-icon"
+                    data-bs-toggle="dropdown"
+                  >
+                    <iconify-icon
+                      icon="material-symbols:add-reaction"
+                    ></iconify-icon>
+                  </button>
+                  <div class="dropdown-menu p-3">
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Buscar emoção..."
+                    />
+                    <div class="d-flex flex-column gap-2">
+                      <button type="button" class="btn text-start">
+                        Feliz
+                      </button>
+                      <button type="button" class="btn text-start">
+                        Triste
+                      </button>
+                      <button type="button" class="btn text-start">
+                        Motivado
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
                 <button class="btn-lt-icon">
                   <iconify-icon
                     icon="material-symbols:add-location-alt"
@@ -166,10 +217,10 @@
             </div>
 
             <div
-              class="col-12 col-md-12 col-lg-7 d-flex flex-column justify-content-between"
+              class="col-12 col-lg-7 d-flex flex-column justify-content-between"
             >
               <div class="row g-3 mb-3">
-                <div class="col-12 col-md-8 col-lg-8">
+                <div class="col-12 col-md-8">
                   <label for="inputTitle" class="form-label fw-semibold mb-2"
                     >TÍTULO</label
                   >
@@ -181,7 +232,7 @@
                     required
                   />
                 </div>
-                <div class="col-12 col-md-4 col-lg-4">
+                <div class="col-12 col-md-4">
                   <label for="inputDate" class="form-label fw-semibold mb-2"
                     >DATA</label
                   >
@@ -207,36 +258,34 @@
               </div>
 
               <div>
-                <button class="btn btn-lt-primary w-100">
+                <button class="btn btn-lt-primary w-100" type="submit">
                   Registrar momento
                 </button>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </form>
     </main>
 
-    <footer class="bg-primary mt-auto py-4">
+    <footer class="footer-lt mt-auto py-4">
       <div class="container">
         <div
           class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3"
         >
           <img
             src="/assets/img/logos/logo-secundario.webp"
-            alt="logo da aplicação"
-            class="img-fluid"
+            alt="Logo LifeTrack"
+            class="img-fluid footer-logo"
           />
-
-          <p class="mb-0">Política de Privacidade</p>
-
-          <p class="mb-0">Política de Cookies</p>
-
-          <p class="mb-0">Termos e Condições</p>
+          <nav class="d-flex flex-column flex-md-row gap-3">
+            <a href="#" class="footer-link"> Política de Privacidade </a>
+            <a href="#" class="footer-link"> Política de Cookies </a>
+            <a href="#" class="footer-link"> Termos e Condições </a>
+          </nav>
         </div>
-
         <div class="mt-4">
-          <p class="mb-0 small">
+          <p class="mb-5 mb-md-0 small">
             &copy; 2026 LifeTrack - Todos os direitos reservados
           </p>
         </div>
