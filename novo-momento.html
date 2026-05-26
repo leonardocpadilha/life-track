@@ -54,7 +54,7 @@
             <li class="nav-item mx-3">
               <a
                 class="nav-link d-flex flex-column align-items-center"
-                href="#"
+                href="timeline.html"
               >
                 <iconify-icon
                   icon="material-symbols:calendar-clock"
@@ -134,7 +134,12 @@
     <main
       class="d-flex justify-content-center align-items-center min-vh-100 p-3 p-lg-0"
     >
+      
+
       <form class="new-moment-form w-100">
+        <h1 class="page-title text-center mb-3">
+          O que você quer registrar hoje?
+        </h1>
         <section class="container content-area p-4">
           <div class="row align-items-stretch">
             <div
@@ -156,7 +161,7 @@
 
                   <input
                     type="file"
-                    class="form-control d-none"
+                    class="form-control visually-hidden"
                     id="inputImage"
                     accept="image/*"
                   />
@@ -169,12 +174,12 @@
               <div
                 class="moment-actions d-flex justify-content-center align-items-center gap-3 mt-3"
               >
-                <button class="btn-lt-icon">
+                <button type="button" class="btn-lt-icon">
                   <iconify-icon
                     icon="material-symbols:bookmark-add"
                   ></iconify-icon>
                 </button>
-                <button class="btn-lt-icon">
+                <button type="button" class="btn-lt-icon">
                   <iconify-icon icon="material-symbols:numbers"></iconify-icon>
                 </button>
 
@@ -208,7 +213,7 @@
                   </div>
                 </div>
 
-                <button class="btn-lt-icon">
+                <button type="button" class="btn-lt-icon">
                   <iconify-icon
                     icon="material-symbols:add-location-alt"
                   ></iconify-icon>
