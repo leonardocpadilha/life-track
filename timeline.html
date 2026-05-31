@@ -141,39 +141,109 @@
           quando quiser!
         </p>
         <section class="container content-area p-4">
-          <article class="card moment-card" style="width: 18rem">
-            <div class="moment-date"></div>
-            <div class="moment-image">
-              <img
-                src="https://res.cloudinary.com/docmbz5tz/image/upload/v1779820929/81eIMvbLnfL._UF1000_1000_QL80__kbm7gr.jpg"
-                class="img-fluid"
-                alt="Banda Muse"
-              />
+          <div class="timeline-viewport">
+            <div class="row g-4 justify-content-center flex-nowrap timeline-track">
+              <article class="col-12 col-sm-6 col-lg-4">
+                <div class="card moment-card d-flex flex-column gap-1 p-3">
+                  <div class="moment-date"></div>
+                  <div class="moment-image">
+                    <img
+                      src="https://res.cloudinary.com/docmbz5tz/image/upload/v1780183847/Itapema_Beach_xprddb.jpg"
+                      class="img-fluid img-card"
+                      alt="Banda Muse"
+                    />
+                  </div>
+                  <div class="moment-details">
+                    <span class="badge rounded-pill pill-details">Viagem</span>
+                    <span class="badge rounded-pill pill-details">#praia</span>
+                    <span class="badge rounded-pill pill-details">Itapema</span>
+                  </div>
+                  <div class="moment-content">
+                    <div class="content-title">
+                      <h3>Fim de tarde na praia</h3>
+                    </div>
+                    <div class="moment-description">
+                      <p>
+                        Passei o fim de tarde caminhando na areia e ouvindo o som do mar. Muito bom pra relaxar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-12 col-sm-6 col-lg-4">
+                <div class="card moment-card d-flex flex-column gap-1 p-3">
+                  <div class="moment-date"></div>
+                  <div class="moment-image">
+                    <img
+                      src="https://res.cloudinary.com/docmbz5tz/image/upload/v1780183846/Severance_Poster_0203_rudeeu.jpg"
+                      class="img-fluid img-card"
+                      alt="Banda Muse"
+                    />
+                  </div>
+                  <div class="moment-details">
+                    <span class="badge rounded-pill pill-details">Lazer</span>
+                    <span class="badge rounded-pill pill-details">#Ruptura</span>
+                  </div>
+                  <div class="moment-content">
+                    <div class="content-title">
+                      <h3>Maratona de Ruptura</h3>
+                    </div>
+                    <div class="moment-description">
+                      <p>
+                        Assisti aos episódios finais de Ruptura. Como essa série é boa, devia ter assistido antes!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-12 col-sm-6 col-lg-4">
+                <div class="card moment-card active-card d-flex flex-column gap-1 p-3">
+                  <div class="moment-date"></div>
+                  <div class="moment-image">
+                    <img
+                      src="https://res.cloudinary.com/docmbz5tz/image/upload/v1779820929/81eIMvbLnfL._UF1000_1000_QL80__kbm7gr.jpg"
+                      class="img-fluid img-card"
+                      alt="Banda Muse"
+                    />
+                  </div>
+                  <div class="moment-details">
+                    <span class="badge rounded-pill pill-details">Música</span>
+                    <span class="badge rounded-pill pill-details">#Muse</span>
+                    <span class="badge rounded-pill pill-details">#Rock</span>
+                  </div>
+                  <div class="moment-content">
+                    <div class="content-title">
+                      <h3>Muse no volume máximo</h3>
+                    </div>
+                    <div class="moment-description">
+                      <p>
+                        Hoje o dia pediu um rock mais intenso pra engrenar. Ouvir Muse
+                        me ajuda a focar e traz a energia que eu estava precisando
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
-            <div class="moment-details">
-              <span class="badge rounded-pill text-bg-primary">Música</span>
-              <span class="badge rounded-pill text-bg-primary">#Muse</span>
-              <span class="badge rounded-pill text-bg-primary">#Rock</span>
+          </div>
+        
+          <div class="row mt-4">
+            <div class="col d-flex justify-content-center align-items-center gap-3">
+              <button type="button" class="btn-lt-carousel timeline-prev d-flex justify-content-center align-items-center">
+                <iconify-icon icon="fe:arrow-left"></iconify-icon>
+              </button>
+              <button type="button" class="btn-lt-carousel timeline-next d-flex justify-content-center align-items-center">
+                <iconify-icon icon="fe:arrow-right"></iconify-icon>
+              </button>
             </div>
-            <div class="moment-content">
-              <div class="content-title">
-                <h3>Muse no volume máximo</h3>
-              </div>
-              <div class="moment-description">
-                <p>
-                  Hoje o dia pediu um rock mais intenso pra engrenar. Ouvir Muse
-                  me ajuda a focar e traz a energia que eu estava precisando
-                </p>
-              </div>
-            </div>
-          </article>
-          <article class="moment-card"></article>
-          <article class="moment-card"></article>
+          </div>
         </section>
       </section>
     </main>
 
-    <footer class="footer-lt mt-auto py-4">
+    <footer class="footer-lt mt-5 py-4">
       <div class="container">
         <div
           class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3"
@@ -201,6 +271,6 @@
       defer
       src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     ></script>
-    <script src="assets/js/novo-momento.js"></script>
+    <script src="assets/js/timeline.js"></script>
   </body>
 </html>
