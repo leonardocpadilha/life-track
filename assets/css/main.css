@@ -11864,9 +11864,14 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1 {
   font-family: "Outfit", sans-serif;
   color: #50AFF2;
+}
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Outfit", sans-serif;
+  color: #000000;
 }
 
 .page-title {
@@ -11917,6 +11922,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .btn-lt-user .user-name {
   color: #FFFFFF;
   font-weight: 500;
+}
+
+.btn-lt-carousel {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #50AFF2;
+  border: none;
+  color: #FFFFFF;
+  font-size: 28px;
 }
 
 .content-area {
@@ -11993,6 +12008,41 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .footer-logo {
   max-width: 220px;
+}
+
+.moment-card {
+  border: 3px solid #50AFF2;
+  border-radius: 15px;
+  width: 350px;
+  min-height: 450px;
+}
+.moment-card .img-card {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.moment-card .pill-details {
+  color: #FFFFFF;
+  font-weight: 400;
+  background-color: #50AFF2;
+}
+.moment-card p {
+  color: #000000;
+  font-weight: 500;
+}
+
+.active-card {
+  background-color: #50AFF2;
+}
+.active-card h3, .active-card .h3,
+.active-card p {
+  color: #FFFFFF;
+}
+.active-card .pill-details {
+  color: #50AFF2;
+  font-weight: 600;
+  background-color: #FFFFFF;
 }
 
 .auth-page {

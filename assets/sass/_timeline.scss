@@ -1,0 +1,9 @@
+.timeline-viewport {
+    overflow: hidden;
+}
+
+.timeline-track {
+    flex-wrap: nowrap;
+
+    transition: transform 0.4s ease;
+}
