@@ -163,7 +163,8 @@
 .moment-card {
     border: 3px solid $lt-azul-primario;
     border-radius: 15px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     min-height: 450px;
 
     .img-card {
@@ -198,4 +199,48 @@
         font-weight: 600;
         background-color: $lt-branco;
     }
+}
+
+//---------------------------------------------------------------------------
+//TIMELINE
+//---------------------------------------------------------------------------
+
+.timeline-track {
+    gap: 24px;
+    
+}
+
+.moment-wrapper {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 0;
+
+    position: relative;
+}
+
+.moment-date {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+
+    color: $lt-cinza-escuro;
+}
+
+//---------------------------------------------------------------------------
+//RESPONSIVIDADE
+//---------------------------------------------------------------------------
+
+@media (max-width: 991px) {
+
+    .timeline-carousel {
+        overflow: hidden;
+    }
+
+    .timeline-track {
+        width: 100%;
+    }
+
+    .moment-wrapper {
+        min-width: 100%;
+    }
+
 }

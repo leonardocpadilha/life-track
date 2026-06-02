@@ -12013,7 +12013,8 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .moment-card {
   border: 3px solid #50AFF2;
   border-radius: 15px;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   min-height: 450px;
 }
 .moment-card .img-card {
@@ -12045,6 +12046,34 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background-color: #FFFFFF;
 }
 
+.timeline-track {
+  gap: 24px;
+}
+
+.moment-wrapper {
+  flex: 0 0 calc(33.333% - 16px);
+  min-width: 0;
+  position: relative;
+}
+
+.moment-date {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #464554;
+}
+
+@media (max-width: 991px) {
+  .timeline-carousel {
+    overflow: hidden;
+  }
+  .timeline-track {
+    width: 100%;
+  }
+  .moment-wrapper {
+    min-width: 100%;
+  }
+}
 .auth-page {
   background-color: #50AFF2;
 }
