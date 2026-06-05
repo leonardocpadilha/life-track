@@ -12230,6 +12230,14 @@ textarea::placeholder {
   transform: scale(1.03);
 }
 
+.moment-description p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
 .journey-card {
   border-radius: 15px;
   padding: clamp(1.5rem, 3vw, 3rem);
