@@ -14,6 +14,7 @@
     &:hover {
         background-color: $lt-azul-primario;
         color: $lt-branco;
+        opacity: 90%;
     }
 
     a {
@@ -84,6 +85,21 @@
 
     line-height: 1;
 
+}
+
+//Botão de Exclusão de Momento
+.btn-lt-delete {
+    background-color: $lt-vermelho-suave;
+    border: none;
+    color: $lt-branco;
+    font-weight: $font-weight-semibold;
+    box-shadow: $shadow-btn-primary;
+
+    &:hover {
+        background-color: $lt-vermelho-suave;
+        color: $lt-branco;
+        opacity: 90%;
+    }
 }
 
 //---------------------------------------------------------------------------

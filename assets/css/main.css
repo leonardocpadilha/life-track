@@ -11902,6 +11902,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .btn-lt-primary:hover {
   background-color: #50AFF2;
   color: #FFFFFF;
+  opacity: 90%;
 }
 .btn-lt-primary a {
   color: #FFFFFF;
@@ -11962,6 +11963,19 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   align-items: center;
   gap: 0.5rem;
   line-height: 1;
+}
+
+.btn-lt-delete {
+  background-color: #F25050;
+  border: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
+}
+.btn-lt-delete:hover {
+  background-color: #F25050;
+  color: #FFFFFF;
+  opacity: 90%;
 }
 
 .content-area {
@@ -12223,10 +12237,10 @@ textarea::placeholder {
   flex-wrap: nowrap;
 }
 
-.moment-card {
+.moment-wrapper {
   transition: transform 0.4s ease;
 }
-.moment-card:hover {
+.moment-wrapper:hover {
   transform: scale(1.03);
 }
 
@@ -12236,6 +12250,14 @@ textarea::placeholder {
   overflow: hidden;
   -webkit-line-clamp: 4;
   line-clamp: 4;
+}
+
+.moment-wrapper .btn-lt-delete {
+  display: none;
+}
+
+.moment-wrapper.active .btn-lt-delete {
+  display: inline-block;
 }
 
 .journey-card {
