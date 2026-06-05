@@ -9,6 +9,8 @@
     font-weight: $font-weight-semibold;
     box-shadow: $shadow-btn-primary;
 
+    @include hover-elevation;
+
     &:hover {
         background-color: $lt-azul-primario;
         color: $lt-branco;
@@ -45,6 +47,7 @@
       width: rem(32);
       height: rem(32);
       background-color: $lt-branco;
+      
       @include flex-center;
     }
     

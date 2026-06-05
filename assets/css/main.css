@@ -11889,6 +11889,15 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #FFFFFF;
   font-weight: 600;
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-lt-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+.btn-lt-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 .btn-lt-primary:hover {
   background-color: #50AFF2;
@@ -12122,6 +12131,15 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .form-autentication .btn-login-social {
   font-weight: 500;
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.form-autentication .btn-login-social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+.form-autentication .btn-login-social:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 .form-autentication .form-check-input {
   border: 1px solid #767586;
@@ -12130,11 +12148,6 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .input-group-text {
   background-color: #F2F4F6;
   border: none;
-}
-
-.btn-concordo {
-  color: #FFFFFF;
-  box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
 }
 
 .text-link {

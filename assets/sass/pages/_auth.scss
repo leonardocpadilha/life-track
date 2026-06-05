@@ -19,6 +19,8 @@
     .btn-login-social {
         font-weight: 500;
         box-shadow: $shadow-btn-primary;
+
+        @include hover-elevation;
     }
     .form-check-input {
     border: 1px solid $lt-cinza-medio;
@@ -28,11 +30,6 @@
 .input-group-text {
     background-color: $lt-cinza-suave;
     border: none;
-}
-
-.btn-concordo {
-    color: $lt-branco;
-    box-shadow: $shadow-btn-primary;
 }
 
 .text-link {
