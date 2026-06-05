@@ -18,7 +18,7 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 ## 🌐 Site em Produção - GitHub Pages
 
-Em andamento.
+[LifeTrack](https://leonardocpadilha.github.io/life-track/)
 
 ## 💻 Tecnologias e Dependências
 
