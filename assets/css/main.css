@@ -12112,6 +12112,9 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border-radius: 15px;
 }
 
+.form-autentication h1, .form-autentication .h1 {
+  color: #000000;
+}
 .form-autentication input {
   background-color: #F2F4F6;
   border: none;
