@@ -13,7 +13,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .page-title {
-  font-size: clamp(2.5rem, 1.8rem + 3vw, 5rem);
+  @include fluid-text(2.5rem, calc(1.8rem + 3vw), 5rem);
 }
 
 .page-description {
