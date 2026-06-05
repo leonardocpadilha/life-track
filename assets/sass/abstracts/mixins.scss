@@ -1,0 +1,15 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin smooth-hover {
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+@mixin fluid-text($min, $preferred, $max) {
+    font-size: clamp($min, $preferred, $max);
+}
