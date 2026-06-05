@@ -12102,25 +12102,26 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background-color: #50AFF2;
 }
 
-.form-login input {
+.card.p-4 {
+  border: none;
+  border-radius: 15px;
+}
+
+.form-autentication input {
   background-color: #F2F4F6;
   border: none;
 }
-.form-login .btn-login-social {
+.form-autentication .btn-login-social {
   font-weight: 500;
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
 }
-.form-login .form-check-input {
+.form-autentication .form-check-input {
   border: 1px solid #767586;
 }
 
 .input-group-text {
   background-color: #F2F4F6;
   border: none;
-}
-
-.card.p-4 {
-  border-radius: 15px;
 }
 
 a {
@@ -12254,7 +12255,7 @@ textarea::placeholder {
   color: #000000;
 }
 
-strong {
+.journey-card_content strong {
   color: #50AFF2;
   font-weight: 800;
 }

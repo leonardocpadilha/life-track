@@ -58,10 +58,14 @@
     color: $lt-preto;
 }
 
-strong {
-    color: $lt-azul-primario;
-    font-weight: 800;
+.journey-card_content {
+    
+    strong {
+        color: $lt-azul-primario;
+        font-weight: 800;
+    }
 }
+
 
 @media (min-width: 768px) {
     .journey-card--media {
