@@ -10,7 +10,7 @@
     }
     .btn-login-social {
         font-weight: 500;
-        box-shadow: $shadow-btn;
+        box-shadow: $shadow-btn-primary;
     }
     .form-check-input {
     border: 1px solid $lt-cinza-medio;
@@ -33,5 +33,5 @@ a {
 
 .btn-concordo {
     color: $lt-branco;
-    box-shadow: $shadow-btn;
+    box-shadow: $shadow-btn-primary;
 }

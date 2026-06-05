@@ -1,11 +1,13 @@
 //---------------------------------------------------------------------------
 //BUTTONS
 //---------------------------------------------------------------------------
+
+//Botão de Ações Primárias
 .btn-lt-primary {
     background-color: $lt-azul-primario;
     color: $lt-branco;
     font-weight: $font-weight-semibold;
-    box-shadow: $shadow-btn;
+    box-shadow: $shadow-btn-primary;
 
     &:hover {
         background-color: $lt-azul-primario;
@@ -23,6 +25,7 @@
     }
 }
 
+//Botão de Perfil
 .btn-lt-user {
     background-color: $lt-azul-primario;
     padding: 4px 12px 4px 6px;
@@ -47,6 +50,7 @@
     }
 }
 
+//Botões de Navegação
 .btn-lt-carousel {
     width: 45px;
     height: 45px;
@@ -55,6 +59,25 @@
     border: none;
     color: $lt-branco;
     font-size: 28px;
+}
+
+//Botões de Filtro
+.btn-lt-filter {
+    background-color: $lt-branco;
+    box-shadow: $shadow-btn-filter;
+    color: $lt-preto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 1px solid $lt-cinza-suave;
+    padding: 7px 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    line-height: 1;
+
 }
 
 //---------------------------------------------------------------------------
@@ -95,6 +118,14 @@
         border-radius: 24px;
         width: calc(100% - 32px);
     }
+}
+
+.nav-link-custom {
+    transition: opacity .3s ease;
+}
+
+.nav-link-custom:hover {
+    opacity: .7;
 }
 
 //Mobile
@@ -160,6 +191,8 @@
 //---------------------------------------------------------------------------
 //CARDS
 //---------------------------------------------------------------------------
+
+//Cards Padrão
 .moment-card {
     border: 3px solid $lt-azul-primario;
     border-radius: 15px;
@@ -186,6 +219,7 @@
     }
 }
 
+//Card Ativo
 .active-card {
     background-color: $lt-azul-primario;
 
@@ -202,7 +236,7 @@
 }
 
 //---------------------------------------------------------------------------
-//TIMELINE
+//TIMELINE CARROSSEL
 //---------------------------------------------------------------------------
 
 .timeline-track {
@@ -225,10 +259,7 @@
     color: $lt-cinza-escuro;
 }
 
-//---------------------------------------------------------------------------
-//RESPONSIVIDADE
-//---------------------------------------------------------------------------
-
+//Mobile
 @media (max-width: 991px) {
 
     .timeline-carousel {

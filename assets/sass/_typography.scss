@@ -13,10 +13,11 @@ h2, h3, h4, h5, h6 {
 }
 
 .page-title {
-  font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  font-size: clamp(2.5rem, 1.8rem + 3vw, 5rem);
 }
 
 .page-description {
+  font-size: clamp(1.1rem, 0.95rem + 0.7vw, 1.5rem);
   color: $lt-preto;
   font-weight: 500;
 }
