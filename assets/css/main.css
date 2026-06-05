@@ -12237,11 +12237,13 @@ textarea::placeholder {
   flex-wrap: nowrap;
 }
 
-.moment-wrapper {
-  transition: transform 0.4s ease;
-}
-.moment-wrapper:hover {
-  transform: scale(1.03);
+@media (min-width: 1024px) {
+  .moment-wrapper {
+    transition: transform 0.4s ease;
+  }
+  .moment-wrapper:hover {
+    transform: scale(1.03);
+  }
 }
 
 .moment-description p {
