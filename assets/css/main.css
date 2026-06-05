@@ -12221,8 +12221,13 @@ textarea::placeholder {
 
 .timeline-track {
   flex-wrap: nowrap;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moment-card {
   transition: transform 0.4s ease;
+}
+.moment-card:hover {
+  transform: scale(1.03);
 }
 
 .journey-card {
@@ -12297,17 +12302,15 @@ textarea::placeholder {
 }
 
 .journey-card_image {
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.4s ease;
 }
-
 .journey-card_image:hover {
   transform: scale(1.03);
 }
 
 .journey-card--text {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
-
 .journey-card--text:hover {
   transform: translateY(-6px);
 }

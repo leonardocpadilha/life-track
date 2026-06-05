@@ -4,12 +4,6 @@
     align-items: center;
 }
 
-@mixin smooth-hover {
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-}
-
 @mixin hover-elevation {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -21,6 +15,22 @@
         transform: translateY(0);
         box-shadow: none;
     }
+}
+
+@mixin micro-zoom($scale-value: 1.03, $duration: 0.4s) {
+  transition: transform $duration ease;
+
+  &:hover {
+    transform: scale($scale-value);
+  }
+}
+
+@mixin micro-float($y-value: -6px, $duration: 0.3s) {
+  transition: transform $duration ease;
+
+  &:hover {
+    transform: translateY($y-value);
+  }
 }
 
 @mixin fluid-text($min, $preferred, $max) {
