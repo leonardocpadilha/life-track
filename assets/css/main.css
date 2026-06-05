@@ -11894,6 +11894,11 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background-color: #50AFF2;
   color: #FFFFFF;
 }
+.btn-lt-primary a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+}
 
 .btn-lt-icon {
   border: none;
@@ -12124,15 +12129,14 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border: none;
 }
 
-a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: 600;
-}
-
 .btn-concordo {
   color: #FFFFFF;
   box-shadow: 0 4px 6px rgba(80, 174, 242, 0.3);
+}
+
+.text-link {
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .new-moment-page {

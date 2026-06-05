@@ -27,13 +27,12 @@
     border: none;
 }
 
-a {
-    color: $lt-branco;
-    text-decoration: none;
-    font-weight: 600;
-}
-
 .btn-concordo {
     color: $lt-branco;
     box-shadow: $shadow-btn-primary;
+}
+
+.text-link {
+    text-decoration: none;
+    font-weight: 600;
 }
