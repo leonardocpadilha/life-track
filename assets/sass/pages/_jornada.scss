@@ -9,7 +9,7 @@
     .journey-card_title {
         @include fluid-text(2rem, 4vw, 3.5rem);
         
-        font-weight: 800;
+        font-weight: $font-weight-bold;
         line-height: 1.05;
         letter-spacing: -0.02em;
         margin-bottom: 1rem;
@@ -26,7 +26,7 @@
         padding: .5rem 1rem;
         font-size: .8rem;
         letter-spacing: .08em;
-        font-weight: 700;
+        font-weight: $font-weight-bold;
     }
 }
 
@@ -63,7 +63,7 @@
     
     strong {
         color: $lt-azul-primario;
-        font-weight: 800;
+        font-weight: $font-weight-bold;
     }
 }
 

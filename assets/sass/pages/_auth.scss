@@ -17,7 +17,7 @@
         border: none;
     }
     .btn-login-social {
-        font-weight: 500;
+        font-weight: $font-weight-medium;
         box-shadow: $shadow-btn-primary;
 
         @include hover-elevation;
@@ -34,5 +34,5 @@
 
 .text-link {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
 }

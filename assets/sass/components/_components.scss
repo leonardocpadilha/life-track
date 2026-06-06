@@ -20,7 +20,7 @@
     a {
         color: $lt-branco;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
     }
 }
 
@@ -54,7 +54,7 @@
     
     .user-name {
         color: $lt-branco;
-        font-weight: 500;
+        font-weight: $font-weight-medium;
     }
 }
 
@@ -75,7 +75,7 @@
     box-shadow: $shadow-btn-filter;
     color: $lt-preto;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: $font-weight-medium;
     border: 1px solid $lt-cinza-suave;
     padding: 7px 17px;
 
@@ -186,18 +186,18 @@
     border-radius: 14px 14px 0 0;
 
     p {
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
         color: $lt-branco;
     }
 
     .small {
-        font-weight: 400;
+        font-weight: $font-weight-normal;
     }
 
     .footer-link {
         color: $lt-branco;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
 
         &:hover {
             color: $lt-branco;
@@ -231,13 +231,13 @@
 
     .pill-details {
         color: $lt-branco;
-        font-weight: 400;
+        font-weight: $font-weight-normal;
         background-color: $lt-azul-primario;
     }
 
     p {
         color: $lt-preto;
-        font-weight: 500;
+        font-weight: $font-weight-medium;
     }
 }
 
@@ -252,7 +252,7 @@
 
     .pill-details {
         color: $lt-azul-primario;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
         background-color: $lt-branco;
     }
 }
@@ -275,7 +275,7 @@
 
 .moment-date {
     font-size: rem(14);
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     margin-bottom: 12px;
 
     color: $lt-cinza-escuro;

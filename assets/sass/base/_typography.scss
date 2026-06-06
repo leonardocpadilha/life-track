@@ -19,5 +19,5 @@ h2, h3, h4, h5, h6 {
 .page-description {
   font-size: clamp(1.1rem, 0.95rem + 0.7vw, 1.5rem);
   color: $lt-preto;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
 }

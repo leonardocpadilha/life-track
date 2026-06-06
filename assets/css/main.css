@@ -12271,7 +12271,7 @@ textarea::placeholder {
 }
 .journey-card .journey-card_title {
   font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
@@ -12316,7 +12316,7 @@ textarea::placeholder {
 
 .journey-card_content strong {
   color: #50AFF2;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
