@@ -219,7 +219,6 @@
     border: 3px solid $lt-azul-primario;
     border-radius: 15px;
     width: 100%;
-    max-width: rem(350);
     min-height: rem(450);
 
     .img-card {
@@ -240,6 +239,13 @@
         font-weight: $font-weight-medium;
     }
 }
+
+@media (min-width: 992px) {
+    .moment-card {
+        max-width: rem(350);
+    }
+}
+
 
 //Card Ativo
 .active-card {
@@ -266,13 +272,6 @@
     
 }
 
-.moment-wrapper {
-    flex: 0 0 calc(33.333% - 16px);
-    min-width: 0;
-
-    position: relative;
-}
-
 .moment-date {
     font-size: rem(14);
     font-weight: $font-weight-semibold;
@@ -281,19 +280,10 @@
     color: $lt-cinza-escuro;
 }
 
-//Mobile
-@media (max-width: 991px) {
+.timeline-track {
+    gap: rem(24);
+}
 
-    .timeline-carousel {
-        overflow: hidden;
-    }
-
-    .timeline-track {
-        width: 100%;
-    }
-
-    .moment-wrapper {
-        min-width: 100%;
-    }
-
+.moment-wrapper {
+    position: relative;
 }

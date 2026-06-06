@@ -12066,7 +12066,6 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border: 3px solid #50AFF2;
   border-radius: 15px;
   width: 100%;
-  max-width: 21.875rem;
   min-height: 28.125rem;
 }
 .moment-card .img-card {
@@ -12085,6 +12084,11 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 500;
 }
 
+@media (min-width: 992px) {
+  .moment-card {
+    max-width: 21.875rem;
+  }
+}
 .active-card {
   background-color: #50AFF2;
 }
@@ -12102,12 +12106,6 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   gap: 1.5rem;
 }
 
-.moment-wrapper {
-  flex: 0 0 calc(33.333% - 16px);
-  min-width: 0;
-  position: relative;
-}
-
 .moment-date {
   font-size: 0.875rem;
   font-weight: 600;
@@ -12115,17 +12113,14 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #464554;
 }
 
-@media (max-width: 991px) {
-  .timeline-carousel {
-    overflow: hidden;
-  }
-  .timeline-track {
-    width: 100%;
-  }
-  .moment-wrapper {
-    min-width: 100%;
-  }
+.timeline-track {
+  gap: 1.5rem;
 }
+
+.moment-wrapper {
+  position: relative;
+}
+
 .auth-page {
   background-color: #50AFF2;
 }
@@ -12233,10 +12228,6 @@ textarea::placeholder {
   overflow: hidden;
 }
 
-.timeline-track {
-  flex-wrap: nowrap;
-}
-
 @media (min-width: 1024px) {
   .moment-wrapper {
     transition: transform 0.4s ease;
@@ -12254,11 +12245,11 @@ textarea::placeholder {
   line-clamp: 4;
 }
 
-.moment-wrapper .btn-lt-delete {
+.btn-lt-delete {
   display: none;
 }
 
-.moment-wrapper.active .btn-lt-delete {
+.active .btn-lt-delete {
   display: inline-block;
 }
 

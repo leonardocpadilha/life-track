@@ -2,10 +2,6 @@
     overflow: hidden;
 }
 
-.timeline-track {
-    flex-wrap: nowrap;
-}
-
 .moment-wrapper {
     
     @media (min-width: 1024px) {
@@ -24,10 +20,13 @@
     } 
 }
 
-.moment-wrapper .btn-lt-delete {
+.btn-lt-delete {
     display: none; 
 }
 
-.moment-wrapper.active .btn-lt-delete {
-    display: inline-block;
+.active {
+
+    .btn-lt-delete {
+        display: inline-block;
+    }
 }
