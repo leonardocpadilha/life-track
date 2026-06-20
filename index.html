@@ -45,9 +45,9 @@
               </div>
 
               <div class="mb-3">
-                <label for="inputSenha" class="form-label fw-semibold">SENHA</label>
+                <label for="inputPassword" class="form-label fw-semibold">SENHA</label>
                 <div class="input-group">
-                  <input type="password" class="form-control" id="inputSenha" required />
+                  <input type="password" class="form-control" id="inputPassword" required minlength="6"/>
                   <button type="button" id="toggleSenha" class="input-group-text">
                     <iconify-icon
                       icon="heroicons-solid:eye"
@@ -58,7 +58,7 @@
               </div>
 
               <button type="submit" class="btn btn-lt-primary w-100 mb-3">
-                <a href="timeline.html">Entrar</a>
+                Entrar
               </button>
 
               <p class="text-center">OU</p>
@@ -89,7 +89,7 @@
       </div>
     </div>
 
+    <script type="module" src="./app/login.js"></script>
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/login.js"></script>
   </body>
 </html>

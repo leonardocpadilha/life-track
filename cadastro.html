@@ -37,14 +37,14 @@
 
         <div class="col-12 col-lg-6">
           <div class="card p-4 mb-3 mb-md-0">
-            <form class="form-autentication">
+            <form class="form-autentication" id="formCadastro">
               <h1 class="mb-3">Crie uma conta e comece a registrar seus momentos!</h1>
 
               <div class="mb-3">
                 <label for="inputName" class="form-label fw-semibold">
                   NOME COMPLETO*
                 </label>
-                <input type="text" class="form-control" id="inputName" required />
+                <input type="text" class="form-control" id="inputName" required minlength="3"/>
               </div>
 
               <div class="mb-3">
@@ -53,28 +53,28 @@
               </div>
 
               <div class="mb-3">
-                <label for="inputSenha" class="form-label fw-semibold">SENHA*</label>
+                <label for="inputPassword" class="form-label fw-semibold">SENHA*</label>
                 <div class="input-group">
-                  <input type="password" class="form-control" id="inputSenha" required />
-                  <button type="button" id="toggleSenha" class="input-group-text">
+                  <input type="password" class="form-control" id="inputPassword" required minlength="6"/>
+                  <button type="button" id="toggleSenha1" class="input-group-text">
                     <iconify-icon
                       icon="heroicons-solid:eye"
-                      id="iconeSenha"
+                      id="iconeSenha1"
                     ></iconify-icon>
                   </button>
                 </div>
               </div>
 
               <div class="mb-3">
-                <label for="inputSenha" class="form-label fw-semibold">
+                <label for="inputConfirmPassword" class="form-label fw-semibold">
                   REPITA A SENHA*
                 </label>
                 <div class="input-group">
-                  <input type="password" class="form-control" id="inputSenha" required />
-                  <button type="button" id="toggleSenha" class="input-group-text">
+                  <input type="password" class="form-control" id="inputConfirmPassword" required minlength="6"/>
+                  <button type="button" id="toggleSenha2" class="input-group-text">
                     <iconify-icon
                       icon="heroicons-solid:eye"
-                      id="iconeSenha"
+                      id="iconeSenha2"
                     ></iconify-icon>
                   </button>
                 </div>
@@ -530,6 +530,7 @@
       </div>
     </div>
 
+    <script type="module" src="./app/cadastro.js"></script>
     <script src="assets/js/login.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
   </body>
