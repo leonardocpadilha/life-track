@@ -1,7 +1,7 @@
 {
   "name": "life-track",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicação web responsiva desenvolvida com foco no registro, organização, visualização e análise de eventos pessoais ao longo do tempo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,6 +27,8 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.4.1",
     "gh-pages": "^6.3.0",
-    "globals": "^17.6.0"
+    "globals": "^17.6.0",
+    "json-server": "^1.0.0-beta.15",
+    "sass": "^1.101.0"
   }
 }
