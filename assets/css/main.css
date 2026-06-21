@@ -12218,10 +12218,20 @@ textarea::placeholder {
 }
 
 .dropdown-menu {
+  width: 21.875rem;
+  max-width: 90vw;
   border: 1px solid #50AFF2;
   border-radius: 18px;
   box-shadow: 0 5px 24px rgba(70, 69, 84, 0.2);
   background-color: #FFFFFF;
+}
+
+.dropdown-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
 }
 
 .timeline-viewport {

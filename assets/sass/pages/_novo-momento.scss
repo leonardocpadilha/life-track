@@ -1,71 +1,79 @@
 .new-moment-page {
-    background-color: $lt-branco-suave;
+  background-color: $lt-branco-suave;
 }
 
 .new-moment-form {
-    max-width: rem(950); 
-    width: 100%;
+  max-width: rem(950);
+  width: 100%;
 
-    input {
-        background-color: $lt-cinza-suave;
-        border: none;
-        color: $lt-preto;
-    }
+  input {
+    background-color: $lt-cinza-suave;
+    border: none;
+    color: $lt-preto;
+  }
 
-    .upload-text {
-        color: $lt-cinza-escuro;
-        font-size: 0.85rem;
-        opacity: 0.7;
-    }
+  .upload-text {
+    color: $lt-cinza-escuro;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
 
-    textarea {
-        background-color: $lt-cinza-suave;
-        color: $lt-preto;
-        border: none;
-        height: 100%; 
-        resize: none;
-    }
+  textarea {
+    background-color: $lt-cinza-suave;
+    color: $lt-preto;
+    border: none;
+    height: 100%;
+    resize: none;
+  }
 }
 
 .upload-area {
-    border: 2px dashed $lt-azul-primario;
-    border-radius: 16px;
+  border: 2px dashed $lt-azul-primario;
+  border-radius: 16px;
 
-    min-height: rem(320);
+  min-height: rem(320);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    text-align: center;
+  text-align: center;
 
+  background-color: $lt-branco-suave;
 
-    background-color: $lt-branco-suave;
-
-    iconify-icon {
-        color: $lt-azul-primario;
-        font-size: rem(60);
-    }
+  iconify-icon {
+    color: $lt-azul-primario;
+    font-size: rem(60);
+  }
 }
 
 .upload-icon {
-    font-size: rem(42);
-    color: $lt-azul-primario;
+  font-size: rem(42);
+  color: $lt-azul-primario;
 }
 
 input,
 textarea {
-
-    &::placeholder {
-        font-size: 0.85rem;
-        opacity: 0.7;
-    }
+  &::placeholder {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
 }
 
 .dropdown-menu {
-    border: 1px solid $lt-azul-primario;
-    border-radius: 18px;
-    box-shadow: $shadow-navbar;
-    background-color: $lt-branco;
+  width: rem(350);
+  max-width: 90vw;
+  border: 1px solid $lt-azul-primario;
+  border-radius: 18px;
+  box-shadow: $shadow-navbar;
+  background-color: $lt-branco;
+}
+
+.dropdown-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
 }
