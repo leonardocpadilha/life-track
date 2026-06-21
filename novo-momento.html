@@ -175,9 +175,21 @@
                   </div>
                 </div>
 
-                <button type="button" class="btn-lt-icon">
-                  <iconify-icon icon="material-symbols:add-location-alt"></iconify-icon>
-                </button>
+                <div class="dropdown" data-bs-auto-close="outside">
+                  <button type="button" class="btn-lt-icon" data-bs-toggle="dropdown">
+                    <iconify-icon icon="material-symbols:add-location-alt"></iconify-icon>
+                  </button>
+
+                  <div class="dropdown-menu p-3">
+                    <input
+                      type="text"
+                      id="inputBuscaLocalizacao"
+                      class="form-control mb-2"
+                      placeholder="Buscar local..."
+                    />
+                    <div id="resultadosMapbox" class="d-flex flex-column gap-1"></div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -253,6 +265,7 @@
       </div>
     </footer>
 
+    <script type="module" src="./app/novo-momento.js"></script>
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/novo-momento.js"></script>
   </body>
