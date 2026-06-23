@@ -130,47 +130,257 @@
                   PRÉ-VISUALIZAÇÃO DE IMAGEM
                 </label>
 
-                <div class="upload-area flex-grow-1">
-                  <p class="upload-text">Quer guardar uma imagem desse momento?</p>
+                <div class="upload-area flex-grow-1" id="uploadArea">
+                  <div id="previewContainer" class="hidden d-flex flex-column align-items-center">
+                    <img id="previewImage" src="#" alt="Preview">
+                  </div>
 
-                  <iconify-icon icon="material-symbols:cloud-upload"></iconify-icon>
-
-                  <input
-                    type="file"
-                    class="form-control visually-hidden"
-                    id="inputImage"
-                    accept="image/*"
-                  />
-                  <label for="inputImage" class="btn btn-lt-primary px-4">
-                    Upload de Imagem
-                  </label>
+                  <div id="uploadContent">
+                    <p class="upload-text">Quer guardar uma imagem desse momento?</p>
+                    <iconify-icon icon="material-symbols:cloud-upload"></iconify-icon>
+                      
+                    <input type="file" class="visually-hidden" id="inputImage" accept="image/*" />
+                    <label for="inputImage" class="btn btn-lt-primary d-block mt-3">
+                      Upload de Imagem
+                    </label>
+                  </div>
                 </div>
-              </div>
 
+              </div>
+              <div id="container-pills" class="d-flex flex-wrap gap-2 mt-3 px-3"></div>
               <div
                 class="moment-actions d-flex justify-content-center align-items-center gap-3 mt-3"
               >
-                <button type="button" class="btn-lt-icon">
-                  <iconify-icon icon="material-symbols:bookmark-add"></iconify-icon>
-                </button>
-                <button type="button" class="btn-lt-icon">
-                  <iconify-icon icon="material-symbols:numbers"></iconify-icon>
-                </button>
+                <div class="dropdown" data-bs-auto-close="outside">
+                  <button type="button" class="btn-lt-icon" data-bs-toggle="dropdown">
+                    <iconify-icon icon="material-symbols:bookmark-add"></iconify-icon>
+                  </button>
+                  <div class="dropdown-menu p-3">
+                    <h6 class="dropdown-title">Adicionar Categoria</h6>
+                    <p class="dropdown-description">Que tipo de momento é esse?</p>
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      id="inputBuscaCategoria"
+                      placeholder="Pesquisar uma categoria..."
+                    />
+                    <div class="actions-list d-flex flex-column gap-2">
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="conquistas"
+                      >
+                        Conquistas
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="aprendizado"
+                      >
+                        Aprendizado
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="carreira"
+                      >
+                        Carreira
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="relacionamentos"
+                      >
+                        Relacionamentos
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="celebracoes"
+                      >
+                        Celebrações
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="experiencias"
+                      >
+                        Experiências
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="saude"
+                      >
+                        Saúde
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="hobbies"
+                      >
+                        Hobbies
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="familia"
+                      >
+                        Família
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="pets"
+                      >
+                        Pets
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="Viagem"
+                      >
+                        Viagem
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="financas"
+                      >
+                        Finanças
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="musica"
+                      >
+                        Música
+                      </button>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="dropdown" data-bs-auto-close="outside">
                   <button type="button" class="btn-lt-icon" data-bs-toggle="dropdown">
                     <iconify-icon icon="material-symbols:add-reaction"></iconify-icon>
                   </button>
                   <div class="dropdown-menu p-3">
+                    <h6 class="dropdown-title">Adicionar Sentimento</h6>
+                    <p class="dropdown-description">
+                      Qual sentimento marcou esse momento?
+                    </p>
                     <input
                       type="text"
                       class="form-control mb-3"
-                      placeholder="Buscar emoção..."
+                      id="inputBuscaSentimento"
+                      placeholder="Pesquisar um sentimento..."
                     />
-                    <div class="d-flex flex-column gap-2">
-                      <button type="button" class="btn text-start">Feliz</button>
-                      <button type="button" class="btn text-start">Triste</button>
-                      <button type="button" class="btn text-start">Motivado</button>
+                    <div class="actions-list d-flex flex-column gap-2">
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="bx:happy"
+                        data-search="feliz"
+                      >
+                        <iconify-icon icon="bx:happy"></iconify-icon>
+                        Feliz
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="material-symbols:sentiment-calm-outline"
+                        data-search="tranquilo"
+                      >
+                        <iconify-icon
+                          icon="material-symbols:sentiment-calm-outline"
+                        ></iconify-icon>
+                        Tranquilo
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="boxicons:happy-heart-eyes"
+                        data-search="apaixonado"
+                      >
+                        <iconify-icon icon="boxicons:happy-heart-eyes"></iconify-icon>
+                        Apaixonado
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="material-symbols:sentiment-excited-outline"
+                        data-search="empolgado"
+                      >
+                        <iconify-icon
+                          icon="material-symbols:sentiment-excited-outline"
+                        ></iconify-icon>
+                        Empolgado
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="la:praying-hands"
+                        data-search="grato"
+                      >
+                        <iconify-icon icon="la:praying-hands"></iconify-icon>
+                        Grato
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="fluent-emoji-high-contrast:star-struck"
+                        data-search="orgulhoso"
+                      >
+                        <iconify-icon
+                          icon="fluent-emoji-high-contrast:star-struck"
+                        ></iconify-icon>
+                        Orgulhoso
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="boxicons:meh-alt"
+                        data-search="frustrado"
+                      >
+                        <iconify-icon icon="boxicons:meh-alt"></iconify-icon>
+                        Frustrado
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="boxicons:sad"
+                        data-search="triste"
+                      >
+                        <iconify-icon icon="boxicons:sad"></iconify-icon>
+                        Triste
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="boxicons:shocked"
+                        data-search="surpreso"
+                      >
+                        <iconify-icon icon="boxicons:shocked"></iconify-icon>
+                        Surpreso
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="fa7-regular:angry"
+                        data-search="raiva"
+                      >
+                        <iconify-icon icon="fa7-regular:angry"></iconify-icon>
+                        Raiva
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start feeling-option d-flex align-items-center gap-2"
+                        data-value="bx:tired"
+                        data-search="cansado"
+                      >
+                        <iconify-icon icon="bx:tired"></iconify-icon>
+                        Cansado
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -181,13 +391,32 @@
                   </button>
 
                   <div class="dropdown-menu p-3">
+                    <h6 class="dropdown-title">Adicionar Local</h6>
+                    <p class="dropdown-description">Onde esse momento aconteceu?</p>
                     <input
                       type="text"
                       id="inputBuscaLocalizacao"
                       class="form-control mb-2"
-                      placeholder="Buscar local..."
+                      placeholder="Pesquisar um local..."
                     />
                     <div id="resultadosMapbox" class="d-flex flex-column gap-1"></div>
+                  </div>
+                </div>
+
+                <div class="dropdown" data-bs-auto-close="outside">
+                  <button type="button" class="btn-lt-icon" data-bs-toggle="dropdown">
+                    <iconify-icon icon="material-symbols:numbers"></iconify-icon>
+                  </button>
+                  <div class="dropdown-menu p-3">
+                    <h6 class="dropdown-title">Adicionar Tag</h6>
+                    <p class="dropdown-description">
+                      Alguma palavra resume esse momento?
+                    </p>
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Digite e pressione enter..."
+                    />
                   </div>
                 </div>
               </div>
