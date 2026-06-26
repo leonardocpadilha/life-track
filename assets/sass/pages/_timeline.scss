@@ -1,32 +1,57 @@
 .timeline-viewport {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .moment-wrapper {
-    
-    @media (min-width: 1024px) {
-        @include micro-zoom;
-    }
-}
-
-.moment-description {
-    
-    p {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;  
-        overflow: hidden; 
-        -webkit-line-clamp: 4; 
-        line-clamp: 4;
-    } 
+  @media (min-width: 1024px) {
+    @include micro-zoom;
+  }
 }
 
 .btn-lt-delete {
-    display: none; 
+  display: none;
 }
 
 .active {
+  .btn-lt-delete {
+    display: inline-block;
+  }
+}
 
-    .btn-lt-delete {
-        display: inline-block;
-    }
+.pill-details {
+  iconify-icon {
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+}
+
+#timelineContainer {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: hidden !important;
+  width: 100% !important;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth !important;
+}
+
+.moment-wrapper {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .moment-wrapper {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .moment-wrapper {
+    flex: 0 0 33.333% !important;
+    max-width: 33.333% !important;
+  }
 }

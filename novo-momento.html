@@ -224,6 +224,20 @@
                       <button
                         type="button"
                         class="btn text-start category-option gap-2"
+                        data-value="filmes"
+                      >
+                        Filmes
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
+                        data-value="series"
+                      >
+                        Séries
+                      </button>
+                      <button
+                        type="button"
+                        class="btn text-start category-option gap-2"
                         data-value="familia"
                       >
                         Família
@@ -415,6 +429,7 @@
                     <input
                       type="text"
                       class="form-control mb-3"
+                      maxlength="30"
                       placeholder="Digite e pressione enter..."
                     />
                   </div>
@@ -432,6 +447,7 @@
                     type="text"
                     class="form-control"
                     id="inputTitle"
+                    maxlength="35"
                     placeholder="Como você chamaria esse momento?"
                     required
                   />
@@ -455,6 +471,7 @@
                   name="inputDescricao"
                   id="inputDescricao"
                   class="form-control flex-grow-1"
+                  maxlength="400"
                   placeholder="Conte um pouco mais sobre esse momento..."
                 ></textarea>
               </div>
