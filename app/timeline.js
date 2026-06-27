@@ -1,25 +1,53 @@
 import { buscarMomentos } from "./service/api.js";
 
+let todosMomentos = [];
+let filtroDataInicio = "";
+let filtroDataFim = "";
+
+function formatarDataMomento(data) {
+  if (!data) return "";
+
+  const [ano, mes, dia] = data.split("-").map(Number);
+
+  return new Date(ano, mes - 1, dia)
+    .toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "short",
+    })
+    .toUpperCase();
+}
+
 // Função para montar o HTML do card
 function montarCard(momento) {
   const detalhes = [];
+
   if (momento.categoria) detalhes.push(momento.categoria);
+
   if (momento.tags && momento.tags.length > 0) {
     momento.tags.forEach((tag) => detalhes.push(tag));
   }
-  if (momento.localizacao)
-    detalhes.push(`<iconify-icon icon="material-symbols:location-on"></iconify-icon> ${momento.localizacao}`);
-  if (momento.sentimento)
+
+  if (momento.localizacao) {
+    detalhes.push(
+      `<iconify-icon icon="material-symbols:location-on"></iconify-icon> ${momento.localizacao}`,
+    );
+  }
+
+  if (momento.sentimento) {
     detalhes.push(`<iconify-icon icon="${momento.sentimento}"></iconify-icon>`);
+  }
 
   const pilsHtml = detalhes
-    .map((item) => `<span class="badge rounded-pill pill-details d-flex align-items-center gap-1">${item}</span>`)
+    .map(
+      (item) =>
+        `<span class="badge rounded-pill pill-details d-flex align-items-center gap-1">${item}</span>`,
+    )
     .join("");
 
   return `
     <div class="moment-wrapper py-md-2">
         <div class="moment-header d-flex align-items-center position-relative mb-3">
-            <div class="moment-date m-0">${new Date(momento.data).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" }).toUpperCase()}</div>
+            <div class="moment-date m-0">${formatarDataMomento(momento.data)}</div>
             <button type="button" class="btn btn-lt-delete rounded-pill position-absolute start-50 translate-middle-x" onclick="excluirMomento('${momento.id}')">
                 &times; Excluir 
             </button>
@@ -42,64 +70,94 @@ function montarCard(momento) {
   `;
 }
 
-
 // Inicializa a lógica dos botões usando a largura real de um card
 function inicializarCarrossel() {
-    const btnLeft = document.getElementById("btnPrev");
-    const btnRight = document.getElementById("btnNext");
-    const container = document.getElementById("timelineContainer");
+  const btnLeft = document.getElementById("btnPrev");
+  const btnRight = document.getElementById("btnNext");
+  const container = document.getElementById("timelineContainer");
 
-    if (!btnLeft || !btnRight || !container) return;
+  if (!btnLeft || !btnRight || !container) return;
 
-    // Calcula a largura de um card para rolar exatamente uma unidade
-    const getCardWidth = () => container.querySelector('.moment-wrapper')?.offsetWidth || 300;
+  const getCardWidth = () =>
+    container.querySelector(".moment-wrapper")?.offsetWidth || 300;
 
-    btnRight.addEventListener("click", () => {
-        const cardWidth = container.querySelector('.moment-wrapper').offsetWidth;
-        container.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-        requestAnimationFrame(atualizarAtivo);
-    });
+  btnRight.onclick = () => {
+    container.scrollBy({ left: getCardWidth(), behavior: "smooth" });
+  };
 
-    btnLeft.addEventListener("click", () => {
-        container.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
-        requestAnimationFrame(atualizarAtivo);
-    });
+  btnLeft.onclick = () => {
+    container.scrollBy({ left: -getCardWidth(), behavior: "smooth" });
+  };
+}
+
+function rolarParaFinalTimeline() {
+  const container = document.getElementById("timelineContainer");
+
+  if (!container) return;
+
+  container.scrollLeft = container.scrollWidth;
+}
+
+function filtrarMomentosPorData(momentos) {
+  if (!filtroDataInicio && !filtroDataFim) {
+    return momentos;
+  }
+
+  return momentos.filter((momento) => {
+    if (!momento.data) return false;
+
+    const dataMomento = String(momento.data).slice(0, 10);
+
+    if (filtroDataInicio && momento.data < filtroDataInicio) return false;
+    if (filtroDataFim && momento.data > filtroDataFim) return false;
+
+    return true;
+  });
+}
+
+function renderizarTimeline(momentos) {
+  const container = document.getElementById("timelineContainer");
+
+  if (!container) return;
+
+  if (momentos.length === 0) {
+    container.innerHTML =
+      "<h4 class='text-center text-dark'>Ops! Nenhum momento encontrado nesse período</h4>";
+    return;
+  }
+
+  container.innerHTML = momentos.map((m) => montarCard(m)).join("");
+
+  const cards = document.querySelectorAll(".moment-card");
+
+  cards.forEach((card) => {
+    const precisaExpandir = card.scrollHeight > 450;
+
+    if (!precisaExpandir) {
+      card.classList.add("no-expand");
+    }
+
+    card.addEventListener("click", toggleCard);
+  });
+
+  inicializarCarrossel();
+
+  requestAnimationFrame(rolarParaFinalTimeline);
 }
 
 async function carregarTimeline() {
   try {
     const momentos = await buscarMomentos();
-    const container = document.getElementById("timelineContainer");
 
-    if (momentos.length === 0) {
+    todosMomentos = momentos.sort((a, b) => a.data.localeCompare(b.data));
+
+    if (todosMomentos.length === 0) {
+      const container = document.getElementById("timelineContainer");
       container.innerHTML = "<p class='text-center'>Nenhum momento registrado ainda.</p>";
       return;
     }
 
-    momentos.sort((a, b) => new Date(a.criadoEm) - new Date(b.criadoEm));
-
-    container.innerHTML = momentos.map(m => montarCard(m)).join("");
-
-    requestAnimationFrame(atualizarAtivo);
-
-    const cards = document.querySelectorAll(".moment-card");
-
-    cards.forEach(card => {
-      const precisaExpandir = card.scrollHeight > 450;
-
-      if (!precisaExpandir) {
-        card.classList.add("no-expand");
-      }
-
-      card.addEventListener("click", toggleCard);
-    });
-
-    inicializarCarrossel();
-
-    requestAnimationFrame(() => {
-      atualizarAtivo();
-    });
-
+    renderizarTimeline(filtrarMomentosPorData(todosMomentos));
   } catch (error) {
     console.error("Erro ao carregar timeline:", error);
   }
@@ -107,48 +165,108 @@ async function carregarTimeline() {
 
 function toggleCard(e) {
   const card = e.currentTarget;
+  const wrapper = card.closest(".moment-wrapper");
+  const jaEstaAtivo = card.classList.contains("active-card");
 
-  if (card.classList.contains("no-expand")) return;
-
-  card.classList.toggle("expanded");
-}
-
-function atualizarAtivo() {
-  const container = document.getElementById("timelineContainer");
   const cards = document.querySelectorAll(".moment-card");
+  const wrappers = document.querySelectorAll(".moment-wrapper");
 
-  if (!container || cards.length === 0) return;
-
-  const containerRect = container.getBoundingClientRect();
-
-  let maisVisivel = cards[0];
-  let maiorArea = 0;
-
-  cards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-
-    const overlap =
-      Math.max(
-        0,
-        Math.min(rect.right, containerRect.right) -
-        Math.max(rect.left, containerRect.left)
-      );
-
-    if (overlap > maiorArea) {
-      maiorArea = overlap;
-      maisVisivel = card;
-    }
+  cards.forEach((outroCard) => {
+    outroCard.classList.remove("active-card");
+    outroCard.classList.remove("expanded");
   });
 
-  cards.forEach(c => c.classList.remove("active-card"));
-  maisVisivel.classList.add("active-card");
+  wrappers.forEach((outroWrapper) => {
+    outroWrapper.classList.remove("active-moment");
+  });
+
+  if (jaEstaAtivo) return;
+
+  card.classList.add("active-card");
+  wrapper.classList.add("active-moment");
+
+  if (!card.classList.contains("no-expand")) {
+    card.classList.add("expanded");
+  }
 }
 
-window.excluirMomento = async (id) => {
-  if (confirm("Deseja realmente excluir este momento?")) {
-    await fetch(`http://localhost:3000/momentos/${id}`, { method: "DELETE" });
-    carregarTimeline();
+let momentoParaExcluirId = null;
+let deleteMomentModal = null;
+
+window.excluirMomento = (id) => {
+  momentoParaExcluirId = id;
+
+  const modalElement = document.getElementById("deleteMomentModal");
+
+  if (!deleteMomentModal) {
+    deleteMomentModal = new bootstrap.Modal(modalElement);
   }
+
+  deleteMomentModal.show();
 };
 
-document.addEventListener("DOMContentLoaded", carregarTimeline);
+function aplicarFiltroData() {
+  const inputDataInicio = document.getElementById("filterStartDate");
+  const inputDataFim = document.getElementById("filterEndDate");
+
+  filtroDataInicio = inputDataInicio?.value || "";
+  filtroDataFim = inputDataFim?.value || "";
+
+  renderizarTimeline(filtrarMomentosPorData(todosMomentos));
+
+  const modalElement = document.getElementById("dateFilterModal");
+  const modal = bootstrap.Modal.getInstance(modalElement);
+
+  if (modal) {
+    modal.hide();
+  }
+}
+
+function limparFiltroData() {
+  const inputDataInicio = document.getElementById("filterStartDate");
+  const inputDataFim = document.getElementById("filterEndDate");
+
+  filtroDataInicio = "";
+  filtroDataFim = "";
+
+  if (inputDataInicio) inputDataInicio.value = "";
+  if (inputDataFim) inputDataFim.value = "";
+
+  renderizarTimeline(todosMomentos);
+
+  const modalElement = document.getElementById("dateFilterModal");
+  const modal = bootstrap.Modal.getInstance(modalElement);
+
+  if (modal) {
+    modal.hide();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  carregarTimeline();
+
+  const confirmDeleteButton = document.getElementById("confirmDeleteMoment");
+
+  confirmDeleteButton.addEventListener("click", async () => {
+    if (!momentoParaExcluirId) return;
+
+    await fetch(`http://localhost:3000/momentos/${momentoParaExcluirId}`, {
+      method: "DELETE",
+    });
+
+    momentoParaExcluirId = null;
+    deleteMomentModal.hide();
+    carregarTimeline();
+  });
+
+  const applyDateFilterButton = document.getElementById("applyDateFilter");
+  const clearDateFilterButton = document.getElementById("clearDateFilter");
+
+  if (applyDateFilterButton) {
+    applyDateFilterButton.addEventListener("click", aplicarFiltroData);
+  }
+
+  if (clearDateFilterButton) {
+    clearDateFilterButton.addEventListener("click", limparFiltroData);
+  }
+});

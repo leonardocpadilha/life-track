@@ -1,20 +1,36 @@
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin hover-elevation {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-    }
-    &:active {
-        transform: translateY(0);
-        box-shadow: none;
-    }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+@mixin hover-elevation-btn {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
 }
 
 @mixin micro-zoom($scale-value: 1.03, $duration: 0.4s) {
@@ -34,5 +50,5 @@
 }
 
 @mixin fluid-text($min, $preferred, $max) {
-    font-size: clamp($min, $preferred, $max);
+  font-size: clamp($min, $preferred, $max);
 }

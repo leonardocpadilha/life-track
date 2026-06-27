@@ -24,6 +24,7 @@
   }
 }
 
+//Botão de Adicionar Detalhes no Registro de Momentos
 .btn-lt-icon {
   border: none;
   background-color: $lt-branco;
@@ -31,6 +32,23 @@
   iconify-icon {
     color: $lt-azul-primario;
     font-size: rem(32);
+
+    @include hover-elevation-btn;
+  }
+}
+
+//Botão de Ações Secundárias
+.btn-lt-secondary {
+  background-color: $lt-branco;
+  color: $lt-preto;
+  font-weight: $font-weight-semibold;
+  box-shadow: $shadow-btn-filter;
+
+  @include hover-elevation;
+
+  &:hover {
+    background-color: $lt-branco-suave;
+    opacity: 90%;
   }
 }
 
@@ -67,6 +85,12 @@
   border: none;
   color: $lt-branco;
   font-size: rem(28);
+
+  &:hover {
+    background-color: $lt-azul-primario;
+    color: $lt-branco;
+    opacity: 90%;
+  }
 }
 
 //Botões de Filtro
@@ -81,10 +105,13 @@
 
   @include flex-center;
 
+  @include hover-elevation;
+
   gap: 0.5rem;
 
   line-height: 1;
 }
+
 //Botão de Alterar Imagem do Formulário
 .btn-lt-alter-image {
   background-color: $lt-azul-primario;
@@ -114,6 +141,22 @@
   color: $lt-branco;
   font-weight: $font-weight-semibold;
   box-shadow: $shadow-btn-primary;
+
+  &:hover {
+    background-color: $lt-vermelho-suave;
+    color: $lt-branco;
+    opacity: 90%;
+  }
+}
+
+//Botão de Confirmação de Exclusão de Momento
+.btn-lt-delete-confirm {
+  background-color: $lt-vermelho-suave;
+  color: $lt-branco;
+  font-weight: $font-weight-semibold;
+  box-shadow: $shadow-btn-filter;
+
+  @include hover-elevation;
 
   &:hover {
     background-color: $lt-vermelho-suave;

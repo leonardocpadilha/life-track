@@ -12,10 +12,8 @@
   display: none;
 }
 
-.active {
-  .btn-lt-delete {
-    display: inline-block;
-  }
+.moment-wrapper.active-moment .btn-lt-delete {
+  display: inline-block;
 }
 
 .pill-details {
@@ -53,5 +51,18 @@
   .moment-wrapper {
     flex: 0 0 33.333% !important;
     max-width: 33.333% !important;
+  }
+}
+
+.modal-header {
+  iconify-icon {
+    font-size: rem(45);
+    color: $lt-vermelho-suave;
+  }
+}
+
+.modal-body {
+  p {
+    color: $lt-preto;
   }
 }
