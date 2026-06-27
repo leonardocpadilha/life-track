@@ -1,96 +1,104 @@
 .journey-card {
-    border-radius: 15px;
-    padding: clamp(1.5rem, 3vw, 3rem);
+  border-radius: 15px;
+  padding: clamp(1.5rem, 3vw, 3rem);
 
-    .journey-card_content {
-        max-width: rem(520);
-    }
+  .journey-card_content {
+    max-width: rem(520);
+  }
 
-    .journey-card_title {
-        @include fluid-text(2rem, 4vw, 3.5rem);
-        
-        font-weight: $font-weight-bold;
-        line-height: 1.05;
-        letter-spacing: -0.02em;
-        margin-bottom: 1rem;
-        text-wrap: balance;
-    }
+  .journey-card_title {
+    @include fluid-text(2rem, 4vw, 3.5rem);
 
-    .journey-card_text {
-        font-size: clamp(1rem, 1.2vw, 1.2rem);
-    }
+    font-weight: $font-weight-bold;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
 
-    .rounded-pill {
-        background-color: $lt-branco;
-        color: $lt-preto;
-        padding: .5rem 1rem;
-        font-size: .8rem;
-        letter-spacing: .08em;
-        font-weight: $font-weight-bold;
-    }
+  .journey-card_text {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+  }
+
+  .rounded-pill {
+    background-color: $lt-branco;
+    color: $lt-preto;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.journey-card_locations {
+  .rounded-pill {
+    background-color: $lt-azul-primario;
+    color: $lt-branco;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    font-weight: $font-weight-bold;
+  }
 }
 
 .journey-card--media {
-    min-height: 320px;
+  min-height: 320px;
 
-    .journey-image {
-        width: 100%;
-        height: rem(250);
-        object-fit: cover;
-        border-radius: 24px;
-    }
+  .journey-image {
+    width: 100%;
+    height: rem(250);
+    object-fit: cover;
+    border-radius: 24px;
+  }
 
-    .journey-card_content {
-        margin-top: 1rem;
-    }
+  .journey-card_content {
+    margin-top: 1rem;
+  }
 
-    &:nth-child(even) .row {
-        flex-direction: row-reverse;
-    }
+  &:nth-child(even) .row {
+    flex-direction: row-reverse;
+  }
 
-    .journey-card_text {
-        color: $lt-preto;
-    }
+  .journey-card_text {
+    color: $lt-preto;
+  }
 }
 
 .journey-card--text {
-    min-height: rem(260);
-    background-color: $lt-azul-primario;
-    color: $lt-preto;
+  min-height: rem(260);
+  background-color: $lt-azul-primario;
+  color: $lt-preto;
 }
 
 .journey-card_content {
-    
-    strong {
-        color: $lt-azul-primario;
-        font-weight: $font-weight-bold;
-    }
+  strong {
+    color: $lt-azul-primario;
+    font-weight: $font-weight-bold;
+  }
 }
 
-
 @media (min-width: 768px) {
-    .journey-card--media {
-
-        .journey-image {
-            height: rem(320);
-            max-height: none;
-        }
-
-        .journey-card_content {
-            margin-top: 0;
-        }
+  .journey-card--media {
+    .journey-image {
+      height: rem(320);
+      max-height: none;
     }
+
+    .journey-card_content {
+      margin-top: 0;
+    }
+  }
 }
 
 .journey-card_image-wrapper {
-    overflow: hidden;
-    border-radius: 24px;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
 .journey-card_image {
-    @include micro-zoom;
+  @include micro-zoom;
 }
 
 .journey-card--text {
-    @include micro-float;
+  @include micro-float;
 }

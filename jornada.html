@@ -127,119 +127,7 @@
           Um resumo dos seus momentos ao longo do tempo...
         </p>
         <section class="container content-area p-3 p-md-5">
-          <div class="d-flex gap-3 mb-4">
-            <button class="rounded-pill btn-lt-filter">
-              <iconify-icon
-                icon="material-symbols:calendar-month-outline-rounded"
-              ></iconify-icon>
-              Período
-            </button>
-          </div>
-
-          <article class="journey-card journey-card--media">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-7 mb-2 mb-md-0">
-                <div class="journey-card_image journey-card_image-wrapper">
-                  <img
-                    src="https://res.cloudinary.com/docmbz5tz/image/upload/w_800,f_auto,q_auto/v1780183846/Severance_Poster_0203_rudeeu.jpg"
-                    srcset="
-                      https://res.cloudinary.com/docmbz5tz/image/upload/w_400,f_auto,q_auto/v1780183846/Severance_Poster_0203_rudeeu.jpg   400w,
-                      https://res.cloudinary.com/docmbz5tz/image/upload/w_800,f_auto,q_auto/v1780183846/Severance_Poster_0203_rudeeu.jpg   800w,
-                      https://res.cloudinary.com/docmbz5tz/image/upload/w_1200,f_auto,q_auto/v1780183846/Severance_Poster_0203_rudeeu.jpg 1200w
-                    "
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    loading="lazy"
-                    class="img-fluid journey-card_image journey-image"
-                    alt="Frame da série Ruptura"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-md-5">
-                <div class="journey-card_content">
-                  <h2 class="journey-card_title text-center text-md-start">
-                    Você registrou 52 momentos este ano
-                  </h2>
-                  <p class="journey-card_text text-center text-md-start">
-                    Em média, um registro por semana. Sua consistência em capturar o
-                    presente criou um arquivo rico e detalhado da sua história.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="journey-card journey-card--text">
-            <div class="row align-items-center">
-              <div class="col-12">
-                <div class="journey-card_content">
-                  <span class="badge rounded-pill mb-2">EDUCAÇÃO</span>
-                  <h2 class="journey-card_title">
-                    Ao todo foram 40 momentos de aprendizado
-                  </h2>
-                  <p class="journey-card_text">Sua curiosidade foi o motor deste ano.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="journey-card journey-card--media">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-7 mb-2 mb-md-0">
-                <div class="journey-card_image">
-                  <img
-                    src="https://res.cloudinary.com/docmbz5tz/image/upload/w_800,f_auto,q_auto/v1780598855/quadro-decorativo-instrumentos-musicais-bateria-percussao-moldura_alndq5.jpg"
-                    srcset="
-                      https://res.cloudinary.com/docmbz5tz/image/upload/w_400,f_auto,q_auto/v1780598855/quadro-decorativo-instrumentos-musicais-bateria-percussao-moldura_alndq5.jpg   400w,
-                      https://res.cloudinary.com/docmbz5tz/image/upload/w_800,f_auto,q_auto/v1780598855/quadro-decorativo-instrumentos-musicais-bateria-percussao-moldura_alndq5.jpg   800w,
-                      https://res.cloudinary.com/docmbz5tz/image/upload/w_1200,f_auto,q_auto/v1780598855/quadro-decorativo-instrumentos-musicais-bateria-percussao-moldura_alndq5.jpg 1200w
-                    "
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    loading="lazy"
-                    class="img-fluid journey-card_image journey-image"
-                    alt="Bateria"
-                  />
-                </div>
-              </div>
-              <div class="col-12 col-md-5">
-                <div class="journey-card_content">
-                  <h2 class="journey-card_title text-center text-md-start">
-                    A tag
-                    <strong>#bateria</strong>
-                    apareceu 18 vezes
-                  </h2>
-                  <p class="journey-card_text text-center text-md-start">
-                    Aparecendo em diferentes momentos da sua jornada.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="journey-card journey-card--text">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-6">
-                <div class="journey-card_content">
-                  <h2 class="journey-card_title">
-                    Você registrou momentos em 3 lugares diferentes
-                  </h2>
-                  <p class="journey-card_text">
-                    Seus registros mostram por onde sua vida passou.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="journey-card_content">
-                  <div
-                    class="journey-card_locations d-flex flex-column flex-lg-row align-items-start gap-2"
-                  >
-                    <span class="badge rounded-pill">Guarapuava</span>
-                    <span class="badge rounded-pill">Rio de Janeiro</span>
-                    <span class="badge rounded-pill">São Paulo</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+          <section id="journeyCards" class="journey-cards"></section>
         </section>
       </section>
     </main>
@@ -268,7 +156,8 @@
       </div>
     </footer>
 
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="module" src="./app/jornada.js"></script>
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/"></script>
   </body>
 </html>

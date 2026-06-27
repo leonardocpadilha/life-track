@@ -1,7 +1,7 @@
 const API_URL = "http://localhost:3000";
 const CLOUD_NAME = "docmbz5tz";
 const UPLOAD_PRESET = "ml_default";
-const MAPBOX_TOKEN = "MEU_TOKEN";
+const MAPBOX_TOKEN = "";
 
 // --- FUNÇÕES DE USUÁRIO ---
 export const salvarUsuario = async (usuario) => {

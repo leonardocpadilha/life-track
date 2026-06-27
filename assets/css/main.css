@@ -12468,6 +12468,15 @@ textarea::placeholder {
   font-weight: 700;
 }
 
+.journey-card_locations .rounded-pill {
+  background-color: #50AFF2;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
 .journey-card--media {
   min-height: 320px;
 }
