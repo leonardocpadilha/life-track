@@ -1,4 +1,4 @@
-import { uploadImagem, salvarMomento, buscarLocalizacao } from "./service/api.js";
+import { uploadImagem, salvarMomento, buscarLocalizacao } from "../../service/api.js";
 
 const inputData = document.getElementById('inputDate');
 
@@ -201,7 +201,7 @@ form.addEventListener("submit", async (e) => {
   const inputDescricao = document.getElementById("inputDescricao");
   const fileInput = document.getElementById("inputImage");
 
-  if (inputTitle.value.length > 50) {
+  if (inputTitle.value.length > 35) {
     return alert("O título deve ter no máximo 35 caracteres.");
   }
 
@@ -229,10 +229,12 @@ form.addEventListener("submit", async (e) => {
       tags: estado.tags,
       sentimento: estado.sentimento,
       localizacao: estado.localizacao,
+      favorito: document.getElementById("inputFavorito").checked,
       criadoEm: new Date().toISOString(),
     });
-
-    window.location.href = "timeline.html";
+    
+    alert("Seu momento foi registrado!");
+    
   } catch (error) {
     // Mantemos apenas um alerta amigável
     alert("Ops, não foi possível salvar o momento. Tente novamente.");
@@ -242,3 +244,4 @@ form.addEventListener("submit", async (e) => {
     if (btnSubmit) btnSubmit.disabled = false;
   }
 });
+

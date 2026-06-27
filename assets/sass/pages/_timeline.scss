@@ -66,3 +66,21 @@
     color: $lt-preto;
   }
 }
+
+.moment-favorite-icon {
+  position: absolute;
+  top: 0.95rem;
+  right: 0.95rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.moment-favorite-icon iconify-icon {
+  font-size: 1.5rem;
+  color: $lt-azul-primario;
+}

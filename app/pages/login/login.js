@@ -1,6 +1,6 @@
 // Arquivo: app/login.js
-import { buscarUsuarios } from "./service/api.js";
-import { configurarToggleSenha } from "./util/password-toggle.js";
+import { buscarUsuarios } from "../../service/api.js";
+import { configurarToggleSenha } from "../../util/password-toggle.js";
 
 // Inicializa o toggle da senha primeiro
 configurarToggleSenha("togglePassword", "inputPassword", "iconeSenha");
@@ -36,7 +36,7 @@ if (formLogin) {
         );
 
         alert("Bem-vindo!");
-        window.location.href = "novo-momento.html";
+        window.location.href = "../novo-momento/novo-momento.html";
       } else {
         alert("E-mail ou senha incorretos.");
       }

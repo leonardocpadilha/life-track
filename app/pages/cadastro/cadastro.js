@@ -1,10 +1,10 @@
-import { validarNomeCompleto, validarSenhaForte } from "./util/validators.js";
-import { configurarToggleSenha } from "./util/password-toggle.js";
-import { User } from "./model/user.js";
-import { salvarUsuario } from "./service/api.js";
+import { validarNomeCompleto, validarSenhaForte } from "../../util/validators.js";
+import { configurarToggleSenha } from "../../util/password-toggle.js";
+import { User } from "../../model/user.js";
+import { salvarUsuario } from "../../service/api.js";
 
-configurarToggleSenha("toggleSenha1", "inputPassword", "iconeSenha1");
-configurarToggleSenha("toggleSenha2", "inputConfirmPassword", "iconeSenha2");
+configurarToggleSenha("togglePassword1", "inputPassword", "iconeSenha1");
+configurarToggleSenha("togglePassword2", "inputConfirmPassword", "iconeSenha2");
 
 const formCadastro = document.getElementById("formCadastro");
 
@@ -43,7 +43,7 @@ if (formCadastro) {
       alert("Cadastro realizado com sucesso!");
 
       formCadastro.reset();
-      window.location.href = "index.html";
+      window.location.href = "../login/login.html";
     } catch (error) {
       console.error("Erro no cadastro:", error);
       alert("Erro ao conectar com o servidor. Tente novamente mais tarde.");

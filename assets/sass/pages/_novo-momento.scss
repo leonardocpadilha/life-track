@@ -116,3 +116,36 @@ textarea {
     font-size: 19px;
   }
 }
+
+.favorite-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.favorite-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.favorite-icon {
+  font-size: rem(32);
+  color: $lt-azul-primario;
+
+  @include hover-elevation-btn;
+}
+
+.favorite-icon--filled {
+  display: none;
+}
+
+.favorite-checkbox:checked + .favorite-toggle .favorite-icon--empty {
+  display: none;
+}
+
+.favorite-checkbox:checked + .favorite-toggle .favorite-icon--filled {
+  display: inline-block;
+}

@@ -1,4 +1,4 @@
-import { buscarMomentos } from "./service/api.js";
+import { buscarMomentos } from "../../service/api.js";
 
 let todosMomentos = [];
 let filtroDataInicio = "";
@@ -44,6 +44,12 @@ function montarCard(momento) {
     )
     .join("");
 
+  const favoritoHtml = momento.favorito
+    ? `<div class="moment-favorite-icon">
+        <iconify-icon icon="mdi:heart"></iconify-icon>
+      </div>`
+    : "";
+
   return `
     <div class="moment-wrapper py-md-2">
         <div class="moment-header d-flex align-items-center position-relative mb-3">
@@ -54,6 +60,7 @@ function montarCard(momento) {
         </div>
         <div class="card moment-card d-flex flex-column gap-1 p-3">
             <div class="moment-image">
+                ${favoritoHtml}
                 <img src="${momento.foto}" class="img-fluid img-card" alt="${momento.titulo}" loading="lazy">
             </div>
             <div class="moment-details d-flex flex-wrap gap-2 mb-2">

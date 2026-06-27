@@ -1,4 +1,4 @@
-import { buscarMomentos } from "./service/api.js";
+import { buscarMomentos } from "../../service/api.js";
 
 const MIN_MOMENTOS_PARA_INSIGHTS = 5;
 
@@ -114,7 +114,7 @@ function gerarInsightTag(tag, momentos) {
       tag.total === 1
         ? `A tag ${formatarTag(tag.valor)} já aparece na sua jornada.`
         : `A tag ${formatarTag(tag.valor)} apareceu ${tag.total} vezes.`,
-    texto: "Esse tema aparece entre os registros que você escolheu guardar.",
+    texto: "Aparecendo em diferentes momentos da sua jornada.",
     imagem: momentoComTag?.foto,
     alt: `Imagem relacionada à tag ${formatarTag(tag.valor)}`,
   };
@@ -133,7 +133,7 @@ function gerarInsightSentimento(sentimento) {
     texto:
       sentimento.total === 1
         ? "Com o tempo, seus registros podem revelar padrões emocionais mais claros."
-        : `Ele aparece em ${sentimento.total} momentos.`,
+        : `Cada momento carregou uma emoção. Esta foi a que mais acompanhou sua jornada. Foram ${sentimento.total} momentos.`,
   };
 }
 

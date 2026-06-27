@@ -7,11 +7,9 @@
 
     <link
       rel="icon"
-      href="./assets/img/logos/logo-icone-primario.webp"
+      href="../../../assets/img/logos/logo-icone-primario.webp"
       type="image/x-icon"
     />
-
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,12 +18,7 @@
       rel="stylesheet"
     />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="../../../assets/css/main.css"/>
 
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   </head>
@@ -36,7 +29,7 @@
         <div class="navbar-logo">
           <a class="navbar-brand m-0" href="#">
             <img
-              src="./assets/img/logos/logo-primario.webp"
+              src="../../../assets/img/logos/logo-primario.webp"
               alt="Logo LifeTrack"
               width="150"
             />
@@ -155,6 +148,7 @@
                       class="visually-hidden"
                       id="inputImage"
                       accept="image/*"
+                      required
                     />
                     <label for="inputImage" class="btn btn-lt-primary d-block mt-3">
                       Upload de Imagem
@@ -449,6 +443,14 @@
                     />
                   </div>
                 </div>
+                <div class="favorite-field">
+                  <input type="checkbox" id="inputFavorito" class="favorite-checkbox" />
+
+                  <label for="inputFavorito" class="favorite-toggle">
+                    <iconify-icon class="favorite-icon favorite-icon--empty" icon="mdi:heart-outline"></iconify-icon>
+                    <iconify-icon class="favorite-icon favorite-icon--filled" icon="mdi:heart"></iconify-icon>
+                  </label>
+                </div>
               </div>
             </div>
 
@@ -462,6 +464,7 @@
                     type="text"
                     class="form-control"
                     id="inputTitle"
+                    minlength="3"
                     maxlength="35"
                     placeholder="Como você chamaria esse momento?"
                     required
@@ -486,8 +489,10 @@
                   name="inputDescricao"
                   id="inputDescricao"
                   class="form-control flex-grow-1"
+                  minlength="3"
                   maxlength="400"
                   placeholder="Conte um pouco mais sobre esse momento..."
+                  required
                 ></textarea>
               </div>
 
@@ -508,7 +513,7 @@
           class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3"
         >
           <img
-            src="./assets/img/logos/logo-secundario.webp"
+            src="../../../assets/img/logos/logo-secundario.webp"
             alt="Logo LifeTrack"
             class="img-fluid footer-logo"
           />
@@ -527,7 +532,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./app/novo-momento.js"></script>
-    <script src="assets/js/novo-momento.js"></script>
+    <script type="module" src="./novo-momento.js"></script>
   </body>
 </html>

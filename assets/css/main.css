@@ -12377,6 +12377,45 @@ textarea::placeholder {
   font-size: 19px;
 }
 
+.favorite-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.favorite-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.favorite-icon {
+  font-size: 2rem;
+  color: #50AFF2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.favorite-icon:hover {
+  transform: translateY(-2px);
+}
+.favorite-icon:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.favorite-icon--filled {
+  display: none;
+}
+
+.favorite-checkbox:checked + .favorite-toggle .favorite-icon--empty {
+  display: none;
+}
+
+.favorite-checkbox:checked + .favorite-toggle .favorite-icon--filled {
+  display: inline-block;
+}
+
 .timeline-viewport {
   overflow: hidden;
 }
@@ -12439,6 +12478,24 @@ textarea::placeholder {
 
 .modal-body p {
   color: #000000;
+}
+
+.moment-favorite-icon {
+  position: absolute;
+  top: 0.95rem;
+  right: 0.95rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.moment-favorite-icon iconify-icon {
+  font-size: 1.5rem;
+  color: #50AFF2;
 }
 
 .journey-card {
