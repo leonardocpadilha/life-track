@@ -1,5 +1,13 @@
 import { uploadImagem, salvarMomento, buscarLocalizacao } from "./service/api.js";
 
+const inputData = document.getElementById('inputDate');
+
+if (inputData) {
+    const hoje = new Date();
+    const dataFormatada = hoje.toLocaleDateString('en-CA');
+    inputData.value = dataFormatada;
+}
+
 const form = document.querySelector(".new-moment-form");
 const inputBusca = document.getElementById("inputBuscaLocalizacao");
 const resultadosMapbox = document.getElementById("resultadosMapbox");
