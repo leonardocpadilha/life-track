@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LifeTrack - Seus Momentos</title>
+    <title>LifeTrack - Sua Jornada</title>
 
     <link
       rel="icon"
@@ -47,7 +47,7 @@
             <li class="nav-item mx-3">
               <a
                 class="nav-link nav-link-custom d-flex flex-column align-items-center"
-                href="novo-momento.html"
+                href="/app/pages/novo-momento/novo-momento.html"
               >
                 <iconify-icon icon="material-symbols:add-box"></iconify-icon>
                 Registrar
@@ -55,8 +55,8 @@
             </li>
             <li class="nav-item mx-3">
               <a
-                class="nav-link active d-flex flex-column align-items-center"
-                href="timeline.html"
+                class="nav-link nav-link-custom d-flex flex-column align-items-center"
+                href="/app/pages/timeline/timeline.html"
               >
                 <iconify-icon icon="material-symbols:calendar-clock"></iconify-icon>
                 Timeline
@@ -64,8 +64,8 @@
             </li>
             <li class="nav-item mx-3">
               <a
-                class="nav-link nav-link-custom d-flex flex-column align-items-center"
-                href="jornada.html"
+                class="nav-link active d-flex flex-column align-items-center"
+                href="/app/pages/jornada/jornada.html"
               >
                 <iconify-icon icon="material-symbols:chart-data"></iconify-icon>
                 Jornada
@@ -90,7 +90,7 @@
           <li class="nav-item text-center">
             <a
               class="nav-link d-flex flex-column align-items-center"
-              href="novo-momento.html"
+              href="/app/pages/novo-momento/novo-momento.html"
             >
               <iconify-icon icon="material-symbols:add-box" class="fs-3"></iconify-icon>
               Registrar
@@ -98,8 +98,8 @@
           </li>
           <li class="nav-item text-center">
             <a
-              class="nav-link active d-flex flex-column align-items-center"
-              href="timeline.html"
+              class="nav-link d-flex flex-column align-items-center"
+              href="/app/pages/timeline/timeline.html"
             >
               <iconify-icon
                 icon="material-symbols:calendar-clock"
@@ -109,7 +109,10 @@
             </a>
           </li>
           <li class="nav-item text-center">
-            <a class="nav-link d-flex flex-column align-items-center" href="jornada.html">
+            <a
+              class="nav-link active d-flex flex-column align-items-center"
+              href="/app/pages/jornada/jornada.html"
+            >
               <iconify-icon
                 icon="material-symbols:chart-data"
                 class="fs-3"
@@ -123,127 +126,16 @@
 
     <main class="d-flex justify-content-center align-items-center min-vh-100 p-3 p-lg-0">
       <section class="w-100">
-        <h1 class="page-title text-center mb-0">Seus momentos</h1>
+        <h1 class="page-title text-center mb-0">Sua jornada</h1>
 
         <p class="page-description text-center mb-3">
-          Aqui estão as histórias que você decidiu guardar. Adicione novas quando quiser!
+          Um resumo dos seus momentos ao longo do tempo...
         </p>
-
         <section class="container content-area p-3 p-md-5">
-          <div class="d-flex gap-3 mb-2">
-            <button
-              type="button"
-              class="rounded-pill btn-lt-filter"
-              data-bs-toggle="modal"
-              data-bs-target="#dateFilterModal"
-            >
-              <iconify-icon
-                icon="material-symbols:calendar-month-outline-rounded"
-              ></iconify-icon>
-              Data
-            </button>
-          </div>
-
-          <div class="container py-2">
-            <div
-              id="timelineContainer"
-              class="row m-0 flex-nowrap overflow-hidden g-4"
-            ></div>
-          </div>
-
-          <div class="d-flex justify-content-center gap-3 mt-2">
-            <button
-              id="btnPrev"
-              type="button"
-              class="btn-lt-carousel d-flex justify-content-center align-items-center"
-            >
-              <iconify-icon icon="fe:arrow-left"></iconify-icon>
-            </button>
-            <button
-              id="btnNext"
-              type="button"
-              class="btn-lt-carousel d-flex justify-content-center align-items-center"
-            >
-              <iconify-icon icon="fe:arrow-right"></iconify-icon>
-            </button>
-          </div>
+          <section id="journeyCards" class="journey-cards"></section>
         </section>
       </section>
     </main>
-
-    <div class="modal fade" id="deleteMomentModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content delete-modal">
-          <div class="modal-header d-flex flex-column">
-            <iconify-icon icon="jam:triangle-danger"></iconify-icon>
-            <h4 class="modal-title">Excluir momento?</h4>
-          </div>
-
-          <div class="modal-body text-center">
-            <p class="mb-0">Não será possível recuperar o registro após a exclusão</p>
-          </div>
-
-          <div
-            class="modal-footer d-flex flex-column align-items-center d-md-flex flex-md-row justify-content-md-center"
-          >
-            <button
-              type="button"
-              class="btn btn-lt-secondary px-4"
-              data-bs-dismiss="modal"
-            >
-              Cancelar
-            </button>
-            <button
-              type="button"
-              class="btn btn-lt-delete-confirm px-4"
-              id="confirmDeleteMoment"
-            >
-              Sim, Excluir
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="dateFilterModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content date-filter-modal">
-          <div class="modal-header">
-            <h4 class="modal-title">Selecionar intervalo</h4>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Fechar"
-            ></button>
-          </div>
-
-          <div class="modal-body">
-            <div class="d-flex flex-column gap-3">
-              <div>
-                <label for="filterStartDate" class="form-label">De</label>
-                <input type="date" id="filterStartDate" class="form-control" />
-              </div>
-
-              <div>
-                <label for="filterEndDate" class="form-label">Até</label>
-                <input type="date" id="filterEndDate" class="form-control" />
-              </div>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-lt-secondary" id="clearDateFilter">
-              Remover
-            </button>
-
-            <button type="button" class="btn btn-lt-primary" id="applyDateFilter">
-              Aplicar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <footer class="footer-lt mt-5 py-4">
       <div class="container">
@@ -269,7 +161,8 @@
       </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./app/timeline.js"></script>
+    <script type="module" src="./app/jornada.js"></script>
   </body>
 </html>
