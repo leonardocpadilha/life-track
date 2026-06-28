@@ -16,18 +16,25 @@ const inputTag = document.querySelector(
   'input[placeholder="Digite e pressione enter..."]',
 );
 
-// Elementos de Imagem
-const inputImage = document.getElementById("inputImage");
-const previewContainer = document.getElementById("previewContainer");
-const previewImage = document.getElementById("previewImage");
-const uploadContent = document.getElementById("uploadContent");
-
 const estado = {
   categoria: null,
   tags: [],
   sentimento: null,
   localizacao: null,
 };
+
+$(".dropify").dropify({
+  messages: {
+    default: "Arraste uma imagem ou clique para escolher",
+    replace: "Arraste ou clique para trocar",
+    remove: "Remover",
+    error: "Ops, algo deu errado.",
+  },
+  error: {
+    fileSize: "A imagem deve ter no máximo 5MB.",
+    fileExtension: "Use apenas imagens JPG, JPEG, PNG ou WEBP.",
+  },
+});
 
 // 1. FILTRAGEM
 function configurarPesquisa(idInput, classeItens) {
@@ -41,51 +48,6 @@ function configurarPesquisa(idInput, classeItens) {
       item.classList.toggle("hidden", !texto.includes(termo));
     });
   });
-}
-
-// 2. LÓGICA DE IMAGEM (Pré-visualização)
-inputImage.addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-
-  const reader = new FileReader();
-  reader.onload = (event) => {
-    previewImage.src = event.target.result;
-
-    // Remove a classe 'hidden' para mostrar a imagem e o container
-    previewContainer.classList.remove("hidden");
-    previewImage.classList.remove("hidden");
-
-    // Adiciona a classe 'hidden' para esconder o conteúdo de upload
-    uploadContent.classList.add("hidden");
-
-    adicionarBotaoExcluir();
-  };
-  reader.readAsDataURL(file);
-});
-
-function adicionarBotaoExcluir() {
-  if (document.getElementById("btnRemover")) return;
-
-  const btnRemover = document.createElement("button");
-  btnRemover.id = "btnRemover";
-  btnRemover.type = "button";
-  btnRemover.className = "btn btn-lt-alter-image";
-  btnRemover.innerHTML = "Alterar Imagem";
-
-  btnRemover.onclick = (e) => {
-    e.preventDefault();
-
-    // Inverte a lógica: esconde a imagem, mostra o conteúdo inicial
-    previewContainer.classList.add("hidden");
-    previewImage.classList.add("hidden");
-    uploadContent.classList.remove("hidden");
-
-    inputImage.value = "";
-    btnRemover.remove();
-  };
-
-  previewContainer.appendChild(btnRemover);
 }
 
 // 3. RENDERIZAÇÃO

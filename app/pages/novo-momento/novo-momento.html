@@ -18,6 +18,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+    />
+
     <link rel="stylesheet" href="../../../assets/css/main.css"/>
 
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
@@ -132,28 +137,18 @@
                 </label>
 
                 <div class="upload-area flex-grow-1" id="uploadArea">
-                  <div
-                    id="previewContainer"
-                    class="hidden d-flex flex-column align-items-center"
-                  >
-                    <img id="previewImage" src="#" alt="Preview" />
-                  </div>
-
-                  <div id="uploadContent">
-                    <p class="upload-text">Quer guardar uma imagem desse momento?</p>
-                    <iconify-icon icon="material-symbols:cloud-upload"></iconify-icon>
-
-                    <input
-                      type="file"
-                      class="visually-hidden"
-                      id="inputImage"
-                      accept="image/*"
-                      required
-                    />
-                    <label for="inputImage" class="btn btn-lt-primary d-block mt-3">
-                      Upload de Imagem
-                    </label>
-                  </div>
+                  <input
+                    type="file"
+                    id="inputImage"
+                    class="dropify"
+                    accept="image/*"
+                    required
+                    data-height="260"
+                    data-allowed-file-extensions="jpg jpeg png webp"
+                    data-max-file-size="5M"
+                    data-default-file=""
+                    data-show-remove="true"
+                  />
                 </div>
               </div>
               <div id="container-pills" class="d-flex flex-wrap gap-2 mt-3 px-3"></div>
@@ -530,7 +525,9 @@
         </div>
       </div>
     </footer>
-
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./novo-momento.js"></script>
   </body>

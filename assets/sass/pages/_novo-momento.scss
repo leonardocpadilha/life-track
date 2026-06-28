@@ -12,12 +12,6 @@
     color: $lt-preto;
   }
 
-  .upload-text {
-    color: $lt-cinza-escuro;
-    font-size: 0.85rem;
-    opacity: 0.7;
-  }
-
   textarea {
     background-color: $lt-cinza-suave;
     color: $lt-preto;
@@ -48,9 +42,32 @@
   }
 }
 
-.upload-icon {
-  font-size: rem(42);
+.dropify-wrapper {
+  border: none;
+  background-color: $lt-branco-suave;
   color: $lt-azul-primario;
+}
+
+.dropify-wrapper .dropify-message p {
+  color: $lt-cinza-medio;
+  font-family: $font-family-base;
+  font-size: 0.85rem;
+}
+
+.dropify-wrapper .dropify-message .file-icon {
+  color: $lt-azul-primario !important;
+}
+
+.dropify-wrapper .dropify-clear {
+  color: $lt-branco;
+  background-color: $lt-azul-primario;
+  font-family: $font-family-base;
+  border: none;
+  border-radius: 6px;
+}
+
+.dropify-wrapper .dropify-preview {
+  background-color: $lt-branco-suave;
 }
 
 .hidden {
@@ -96,10 +113,6 @@ textarea {
 .actions-list {
   max-height: rem(75);
   overflow-y: auto;
-}
-
-.hidden {
-  display: none !important;
 }
 
 .pill-actions {
