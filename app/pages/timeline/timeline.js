@@ -1,4 +1,8 @@
-import { buscarMomentos } from "../../service/api.js";
+import { buscarMomentosDoUsuario, excluirMomento } from "../../service/api.js";
+import { protegerPagina, configurarNavbarUsuario } from "../../util/auth.js";
+
+const usuarioLogado = protegerPagina();
+configurarNavbarUsuario();
 
 let todosMomentos = [];
 let filtroDataInicio = "";
@@ -154,13 +158,13 @@ function renderizarTimeline(momentos) {
 
 async function carregarTimeline() {
   try {
-    const momentos = await buscarMomentos();
+    const momentos = await buscarMomentosDoUsuario(usuarioLogado.id);
 
     todosMomentos = momentos.sort((a, b) => a.data.localeCompare(b.data));
 
     if (todosMomentos.length === 0) {
       const container = document.getElementById("timelineContainer");
-      container.innerHTML = "<p class='text-center'>Nenhum momento registrado ainda.</p>";
+      container.innerHTML = "<h3 class='text-center text-primary'>Você ainda não registrou nenhum momento.</h3>";
       return;
     }
 
@@ -257,9 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
   confirmDeleteButton.addEventListener("click", async () => {
     if (!momentoParaExcluirId) return;
 
-    await fetch(`http://localhost:3000/momentos/${momentoParaExcluirId}`, {
-      method: "DELETE",
-    });
+    await excluirMomento(momentoParaExcluirId);
 
     momentoParaExcluirId = null;
     deleteMomentModal.hide();

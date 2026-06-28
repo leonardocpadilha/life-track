@@ -66,13 +66,25 @@
             </li>
           </ul>
         </div>
-        <div class="navbar-user">
-          <button class="btn rounded-pill btn-lt-user d-flex align-items-center gap-2">
+        
+        <div class="navbar-user position-relative">
+          <button
+            type="button"
+            id="btnUserMenu"
+            class="btn rounded-pill btn-lt-user d-flex align-items-center gap-2"
+          >
             <div class="avatar-circle rounded-circle">
               <iconify-icon icon="fa6-solid:user"></iconify-icon>
             </div>
-            <span class="user-name">Usuário</span>
+            <span id="navbarUserName" class="user-name">Usuário</span>
           </button>
+
+          <div id="userDropdown" class="user-dropdown hidden">
+            <button type="button" id="btnLogout" class="btn-logout d-flex align-items-center">
+              <iconify-icon icon="lucide:log-out"></iconify-icon>
+              Sair
+            </button>
+          </div>
         </div>
       </div>
     </nav>

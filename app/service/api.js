@@ -78,3 +78,17 @@ export const buscarMomentos = async () => {
   if (!response.ok) throw new Error("Erro ao buscar momentos");
   return await response.json();
 };
+
+export const buscarMomentosDoUsuario = async (usuarioId) => {
+  const response = await fetch(`${API_URL}/momentos?usuarioId=${usuarioId}`);
+  if (!response.ok) throw new Error("Erro ao buscar momentos do usuário");
+  return await response.json();
+};
+
+export const excluirMomento = async (id) => {
+  const response = await fetch(`${API_URL}/momentos/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!response.ok) throw new Error("Erro ao excluir momento");
+};

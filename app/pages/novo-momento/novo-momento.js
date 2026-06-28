@@ -1,4 +1,8 @@
 import { uploadImagem, salvarMomento, buscarLocalizacao } from "../../service/api.js";
+import { protegerPagina, configurarNavbarUsuario } from "../../util/auth.js";
+
+const usuarioLogado = protegerPagina();
+configurarNavbarUsuario();
 
 const inputData = document.getElementById('inputDate');
 
@@ -183,6 +187,7 @@ form.addEventListener("submit", async (e) => {
     if (!urlFoto) throw new Error("Falha ao obter URL da imagem");
 
     await salvarMomento({
+      usuarioId: usuarioLogado.id,
       titulo: document.getElementById("inputTitle").value,
       data: document.getElementById("inputDate").value,
       descricao: document.getElementById("inputDescricao").value,

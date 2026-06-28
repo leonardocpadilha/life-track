@@ -1,4 +1,8 @@
-import { buscarMomentos } from "../../service/api.js";
+import { buscarMomentosDoUsuario } from "../../service/api.js";
+import { protegerPagina, configurarNavbarUsuario } from "../../util/auth.js";
+
+const usuarioLogado = protegerPagina();
+configurarNavbarUsuario();
 
 const MIN_MOMENTOS_PARA_INSIGHTS = 5;
 
@@ -26,7 +30,7 @@ $(document).ready(() => {
 
 async function carregarJornada() {
   try {
-    const momentos = await buscarMomentos();
+    const momentos = await buscarMomentosDoUsuario(usuarioLogado.id);
     renderizarJornada(momentos || []);
   } catch (error) {
     console.error("Erro ao carregar jornada:", error);
@@ -278,14 +282,10 @@ function montarCardLocalizacaoMedia(insight) {
 
 function montarEstadoInicial(totalMomentos) {
   return `
-    <article class="journey-card journey-card--text">
-      <div class="journey-card_content text-center">
-        <h2 class="journey-card_title">Sua jornada ainda está começando.</h2>
-        <p class="journey-card_text">
-          Você registrou ${totalMomentos} ${totalMomentos === 1 ? "momento" : "momentos"}.
-          Registre pelo menos 5 momentos para revelar seus primeiros insights.
-        </p>
-      </div>
-    </article>
+    <h3 class="journey-card_title text-center text-primary">Sua jornada ainda está começando.</h3>
+    <p class="journey-card_text text-center text-dark">
+      Você registrou ${totalMomentos} ${totalMomentos === 1 ? "momento" : "momentos"}.
+      Registre pelo menos 5 momentos para revelar seus primeiros insights.
+    </p>
   `;
 }

@@ -30,6 +30,7 @@ if (formLogin) {
         localStorage.setItem(
           "userSession",
           JSON.stringify({
+            id: usuarioEncontrado.id,
             nome: usuarioEncontrado.name,
             email: usuarioEncontrado.email,
           }),
