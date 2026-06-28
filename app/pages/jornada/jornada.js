@@ -1,11 +1,13 @@
 import { buscarMomentosDoUsuario } from "../../service/api.js";
 import { protegerPagina, configurarNavbarUsuario } from "../../util/auth.js";
 
+// --- CONFIGURAÇÃO INICIAL ---
 const usuarioLogado = protegerPagina();
 configurarNavbarUsuario();
 
 const MIN_MOMENTOS_PARA_INSIGHTS = 5;
 
+// --- MAPA DE ÍCONES POR SENTIMENTO ---
 const SENTIMENTOS_LABELS = {
   "material-symbols:sentiment-very-satisfied-outline": "Feliz",
   "material-symbols:sentiment-calm-outline": "Tranquilo",
@@ -24,22 +26,24 @@ function formatarSentimento(sentimento) {
   return SENTIMENTOS_LABELS[sentimento] || sentimento;
 }
 
+// --- INICIALIZAÇÃO ---
 $(document).ready(() => {
   carregarJornada();
 });
 
+// --- CARREGAMENTO DA JORNADA ---
 async function carregarJornada() {
   try {
     const momentos = await buscarMomentosDoUsuario(usuarioLogado.id);
     renderizarJornada(momentos || []);
   } catch (error) {
-    console.error("Erro ao carregar jornada:", error);
     $("#journeyCards").html(
       "<p class='text-center'>Não foi possível carregar sua jornada.</p>",
     );
   }
 }
 
+// --- RENDERIZAÇÃO ---
 function renderizarJornada(momentos) {
   const $container = $("#journeyCards");
 
@@ -53,6 +57,7 @@ function renderizarJornada(momentos) {
   $container.html(insights.map((insight) => montarCardInsight(insight)).join(""));
 }
 
+// --- GERAÇÃO DE INSIGHTS ---
 function gerarInsights(momentos) {
   const insights = [];
 
@@ -158,6 +163,7 @@ function gerarInsightLocalizacao(localizacoes, momentos) {
   };
 }
 
+// --- FUNÇÕES AUXILIARES ---
 function obterMaisFrequente(valores) {
   if (valores.length === 0) return null;
 
@@ -192,6 +198,7 @@ function formatarTag(tag) {
   return tag.startsWith("#") ? tag : `#${tag}`;
 }
 
+// --- RENDERIZAÇÃO DOS CARDS ---
 function montarCardInsight(insight) {
   if (insight.tipo === "media" && insight.imagem) {
     return montarCardMedia(insight);

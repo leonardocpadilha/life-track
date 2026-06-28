@@ -38,7 +38,7 @@ export const salvarMomento = async (momento) => {
 export const uploadImagem = async (arquivo) => {
   const formData = new FormData();
   formData.append("file", arquivo);
-  formData.append("upload_preset", "ml_default");
+  formData.append("upload_preset", UPLOAD_PRESET);
 
   try {
     const response = await fetch(
@@ -52,7 +52,6 @@ export const uploadImagem = async (arquivo) => {
     const data = await response.json();
 
     if (!response.ok) {
-      // Isso vai imprimir no console exatamente o que o Cloudinary recusou
       console.error("Cloudinary retornou erro:", data);
       return null;
     }
@@ -73,7 +72,7 @@ export const buscarLocalizacao = async (query) => {
   return data.features;
 };
 
-// --- ADICIONE ISSO NO SEU api.js ---
+// --- FUNÇÕES DE CONSULTA DE MOMENTOS ---
 export const buscarMomentos = async () => {
   const response = await fetch(`${API_URL}/momentos`);
   if (!response.ok) throw new Error("Erro ao buscar momentos");

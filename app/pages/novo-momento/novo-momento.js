@@ -1,9 +1,11 @@
 import { uploadImagem, salvarMomento, buscarLocalizacao } from "../../service/api.js";
 import { protegerPagina, configurarNavbarUsuario } from "../../util/auth.js";
 
+// --- CONFIGURAÇÃO INICIAL ---
 const usuarioLogado = protegerPagina();
 configurarNavbarUsuario();
 
+// --- ELEMENTOS DA INTERFACE ---
 const inputData = document.getElementById('inputDate');
 
 if (inputData) {
@@ -20,6 +22,7 @@ const inputTag = document.querySelector(
   'input[placeholder="Digite e pressione enter..."]',
 );
 
+// --- ESTADO DA APLICAÇÃO ---
 const estado = {
   categoria: null,
   tags: [],
@@ -27,6 +30,7 @@ const estado = {
   localizacao: null,
 };
 
+// --- CONFIGURAÇÃO DO DROPIFY ---
 $(".dropify").dropify({
   messages: {
     default: "Arraste uma imagem ou clique para escolher",
@@ -40,7 +44,7 @@ $(".dropify").dropify({
   },
 });
 
-// 1. FILTRAGEM
+// --- FUNÇÕES AUXILIARES ---
 function configurarPesquisa(idInput, classeItens) {
   const input = document.getElementById(idInput);
   if (!input) return;
@@ -54,7 +58,6 @@ function configurarPesquisa(idInput, classeItens) {
   });
 }
 
-// 3. RENDERIZAÇÃO
 function renderizarPills() {
   containerPills.innerHTML = "";
   if (estado.categoria)
@@ -101,13 +104,11 @@ function criarPillVisual(conteudo, onRemove, ehIcone) {
   containerPills.appendChild(pill);
 }
 
-// Ativações
+// --- INICIALIZAÇÃO ---
 configurarPesquisa("inputBuscaCategoria", "category-option");
 configurarPesquisa("inputBuscaSentimento", "feeling-option");
 
-// ... (Restante do seu código original de Tags, Mapbox, Submit e Cliques permanece inalterado)
-
-// INPUT TAGS
+// --- EVENTOS ---
 inputTag.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
@@ -127,7 +128,6 @@ inputTag.addEventListener("keydown", (e) => {
   }
 });
 
-// MAPBOX
 inputBusca.addEventListener("input", async (e) => {
   const resultados = await buscarLocalizacao(e.target.value);
   resultadosMapbox.innerHTML = "";
@@ -146,13 +146,11 @@ inputBusca.addEventListener("input", async (e) => {
   });
 });
 
-// CLIQUE CATEGORIA E SENTIMENTO
 document.querySelectorAll(".category-option, .feeling-option").forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.classList.contains("category-option")) {
       estado.categoria = btn.innerText.trim();
     } else if (btn.classList.contains("feeling-option")) {
-      // Pega o valor do atributo, garantindo que não seja nulo
       const valor = btn.getAttribute("data-value");
       if (valor) estado.sentimento = valor;
     }
@@ -160,7 +158,6 @@ document.querySelectorAll(".category-option, .feeling-option").forEach((btn) => 
   });
 });
 
-// ENVIO
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const inputTitle = document.getElementById("inputTitle");
@@ -178,7 +175,6 @@ form.addEventListener("submit", async (e) => {
   if (!fileInput.files[0]) return alert("Por favor, insira uma imagem ao seu momento!");
 
   try {
-    // Mostra um aviso visual se a rede for lenta (opcional, mas recomendado)
     const btnSubmit = e.target.querySelector('button[type="submit"]');
     if (btnSubmit) btnSubmit.disabled = true;
 
@@ -199,14 +195,12 @@ form.addEventListener("submit", async (e) => {
       favorito: document.getElementById("inputFavorito").checked,
       criadoEm: new Date().toISOString(),
     });
-    
+    window.location.href = "../timeline/timeline.html"
     alert("Seu momento foi registrado!");
     
   } catch (error) {
-    // Mantemos apenas um alerta amigável
     alert("Ops, não foi possível salvar o momento. Tente novamente.");
 
-    // Habilitamos o botão novamente caso ocorra erro
     const btnSubmit = e.target.querySelector('button[type="submit"]');
     if (btnSubmit) btnSubmit.disabled = false;
   }

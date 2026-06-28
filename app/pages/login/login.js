@@ -1,14 +1,13 @@
-// Arquivo: app/login.js
 import { buscarUsuarios } from "../../service/api.js";
 import { configurarToggleSenha } from "../../util/password-toggle.js";
 
-// Inicializa o toggle da senha primeiro
 configurarToggleSenha("togglePassword", "inputPassword", "iconeSenha");
 
 const formLogin = document.querySelector("form");
 
+// --- LOGIN DO USUÁRIO ---
 if (formLogin) {
-  formLogin.addEventListener("submit", async function (event) {
+  formLogin.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const email = document.getElementById("inputEmail").value;
@@ -19,6 +18,7 @@ if (formLogin) {
       return;
     }
 
+    //Busca os usuários cadastrados e valida as credenciais
     try {
       const usuarios = await buscarUsuarios();
 
@@ -42,8 +42,7 @@ if (formLogin) {
         alert("E-mail ou senha incorretos.");
       }
     } catch (error) {
-      console.error("Erro no login:", error);
-      alert("Erro de conexão. Certifique-se de que o JSON Server está rodando.");
+      alert("Erro ao conectar com o servidor. Tente novamente mais tarde.");
     }
   });
 }

@@ -9,7 +9,7 @@ configurarToggleSenha("togglePassword2", "inputConfirmPassword", "iconeSenha2");
 const formCadastro = document.getElementById("formCadastro");
 
 if (formCadastro) {
-  formCadastro.addEventListener("submit", async function (event) {
+  formCadastro.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const nome = document.getElementById("inputName").value.trim();
@@ -17,7 +17,7 @@ if (formCadastro) {
     const senha = document.getElementById("inputPassword").value;
     const confirmaSenha = document.getElementById("inputConfirmPassword").value;
 
-    // Validações
+    // --- VALIDAÇÃO DO FORMULÁRIO ---
     if (!validarNomeCompleto(nome)) {
       alert("Por favor, insira seu nome completo (nome e sobrenome).");
       return;
@@ -33,9 +33,11 @@ if (formCadastro) {
 
     const novoUsuario = new User(nome, email, senha);
 
+    // --- CADASTRO DO USUÁRIO ---
     try {
       await salvarUsuario(novoUsuario);
 
+      //Salva o usuário no LocalStorage
       const usuarios = JSON.parse(localStorage.getItem("users") || "[]");
       usuarios.push(novoUsuario);
       localStorage.setItem("users", JSON.stringify(usuarios));
@@ -45,7 +47,6 @@ if (formCadastro) {
       formCadastro.reset();
       window.location.href = "../login/login.html";
     } catch (error) {
-      console.error("Erro no cadastro:", error);
       alert("Erro ao conectar com o servidor. Tente novamente mais tarde.");
     }
   });

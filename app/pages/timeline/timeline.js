@@ -1,13 +1,16 @@
 import { buscarMomentosDoUsuario, excluirMomento } from "../../service/api.js";
 import { protegerPagina, configurarNavbarUsuario } from "../../util/auth.js";
 
+// --- CONFIGURAÇÃO INICIAL ---
 const usuarioLogado = protegerPagina();
 configurarNavbarUsuario();
 
+// --- ESTADO DA PÁGINA ---
 let todosMomentos = [];
 let filtroDataInicio = "";
 let filtroDataFim = "";
 
+// --- FUNÇÕES AUXILIARES ---
 function formatarDataMomento(data) {
   if (!data) return "";
 
@@ -21,7 +24,6 @@ function formatarDataMomento(data) {
     .toUpperCase();
 }
 
-// Função para montar o HTML do card
 function montarCard(momento) {
   const detalhes = [];
 
@@ -81,7 +83,6 @@ function montarCard(momento) {
   `;
 }
 
-// Inicializa a lógica dos botões usando a largura real de um card
 function inicializarCarrossel() {
   const btnLeft = document.getElementById("btnPrev");
   const btnRight = document.getElementById("btnNext");
@@ -117,8 +118,6 @@ function filtrarMomentosPorData(momentos) {
   return momentos.filter((momento) => {
     if (!momento.data) return false;
 
-    const dataMomento = String(momento.data).slice(0, 10);
-
     if (filtroDataInicio && momento.data < filtroDataInicio) return false;
     if (filtroDataFim && momento.data > filtroDataFim) return false;
 
@@ -126,6 +125,7 @@ function filtrarMomentosPorData(momentos) {
   });
 }
 
+// --- RENDERIZAÇÃO ---
 function renderizarTimeline(momentos) {
   const container = document.getElementById("timelineContainer");
 
@@ -133,7 +133,7 @@ function renderizarTimeline(momentos) {
 
   if (momentos.length === 0) {
     container.innerHTML =
-      "<h4 class='text-center text-dark'>Ops! Nenhum momento encontrado nesse período</h4>";
+      "<h3 class='text-center text-primary'>Ops! Nenhum momento encontrado nesse período.</h3>";
     return;
   }
 
@@ -156,6 +156,7 @@ function renderizarTimeline(momentos) {
   requestAnimationFrame(rolarParaFinalTimeline);
 }
 
+// --- CARREGAMENTO DA TIMELINE ---
 async function carregarTimeline() {
   try {
     const momentos = await buscarMomentosDoUsuario(usuarioLogado.id);
@@ -170,10 +171,11 @@ async function carregarTimeline() {
 
     renderizarTimeline(filtrarMomentosPorData(todosMomentos));
   } catch (error) {
-    console.error("Erro ao carregar timeline:", error);
+    alert("Não foi possível carregar seus momentos.");
   }
 }
 
+// --- INTERAÇÕES DOS CARDS ---
 function toggleCard(e) {
   const card = e.currentTarget;
   const wrapper = card.closest(".moment-wrapper");
@@ -201,6 +203,7 @@ function toggleCard(e) {
   }
 }
 
+// --- EXCLUSÃO DE MOMENTOS ---
 let momentoParaExcluirId = null;
 let deleteMomentModal = null;
 
@@ -216,6 +219,7 @@ window.excluirMomento = (id) => {
   deleteMomentModal.show();
 };
 
+// --- FILTRO POR DATA ---
 function aplicarFiltroData() {
   const inputDataInicio = document.getElementById("filterStartDate");
   const inputDataFim = document.getElementById("filterEndDate");
@@ -253,6 +257,7 @@ function limparFiltroData() {
   }
 }
 
+// --- INICIALIZAÇÃO DA PÁGINA ---
 document.addEventListener("DOMContentLoaded", () => {
   carregarTimeline();
 
