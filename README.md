@@ -2,7 +2,7 @@
 
 ### Autor: Leonardo Correa Padilha
 
-Aplicação web responsiva desenvolvida com foco no registro, organização, visualização e análise de eventos pessoais ao longo do tempo. A aplicação permite ao usuário registrar momentos importantes da sua vida, categorizá-los e acompanhá-los em uma linha do tempo interativa, além de gerar insights e resumos que ajudam na compreensão da sua jornada pessoal. O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
+Aplicação web responsiva desenvolvida com foco no registro, organização, visualização e análise de eventos pessoais ao longo do tempo. A aplicação permite ao usuário registrar momentos importantes da sua vida, categorizá-los e acompanhá-los em uma linha do tempo interativa, além de gerar insights e resumos que ajudam na compreensão da sua jornada pessoal. O frontend da aplicação foi desenvolvido com HTML, SASS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## 📘 Documentação do Projeto
 
@@ -78,9 +78,7 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 - [x] ID 23 - Realiza requisições assíncronas para uma API fake para exibir dados na página.
 - [x] ID 24 - Realiza requisições assíncronas para APIs públicas reais (OpenWeather, ViaCEP etc.), exibindo os dados e tratando erros.
 
-## 📖 Manual de Execução
-
-# Manual de Execução do Sistema
+## 📖 Manual de Execução do Sistema
 
 - Clonar o repositório do projeto: `git clone <URL_DO_REPOSITORIO>`;
 - Acessar a branch **develop**, que contém as modificações mais recentes: `git checkout develop`;
