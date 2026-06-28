@@ -87,10 +87,7 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 - Abrir o projeto no Visual Studio Code (VS Code) ou em outro editor de código;
 - Abrir um terminal apontando para o diretório raiz do projeto;
 - Instalar as dependências do projeto: `npm install`;
+- Copiar o arquivo config.example.js, renomeá-lo para config.js e substituir o valor da constante MAPBOX_TOKEN pela chave de acesso da API Mapbox;
 - Executar a API Fake (JSON Server): `npx json-server --watch db.json`;
 - Abrir o arquivo `index.html` utilizando a extensão **Live Server** do Visual Studio Code;
 - O sistema estará disponível no navegador, mantendo o JSON Server em execução.
-
-## 📱 Telas de Aplicação
-
-Em andamento.
