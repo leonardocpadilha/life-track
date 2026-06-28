@@ -54,33 +54,42 @@ Para entender as regras de negócio, o escopo e a arquitetura técnica da aplica
 
 ### RA2 - Realizar tratamento de formulários e aplicar validações customizadas no lado cliente.
 
-- [ ] ID 11 - Implementa validação HTML nativa (campos obrigatórios, tipos, limites de caracteres) com mensagens de erro/sucesso no lado cliente.
-- [ ] ID 12 - Aplica expressões regulares (REGEX) para validações customizadas (e-mail, telefone, datas, etc.)
-- [ ] ID 13 - Utiliza elementos de seleção em formulários (checkbox, radio, select) para coleta de dados.
-- [ ] ID 14 - Implementa leitura e escrita no Web Storage (localStorage/sessionStorage) para persistir dados localmente.
+- [x] ID 11 - Implementa validação HTML nativa (campos obrigatórios, tipos, limites de caracteres) com mensagens de erro/sucesso no lado cliente.
+- [x] ID 12 - Aplica expressões regulares (REGEX) para validações customizadas (e-mail, telefone, datas, etc.)
+- [x] ID 13 - Utiliza elementos de seleção em formulários (checkbox, radio, select) para coleta de dados.
+- [x] ID 14 - Implementa leitura e escrita no Web Storage (localStorage/sessionStorage) para persistir dados localmente.
 
 ### RA3 - Aplicar ferramentas para otimização do processo de desenvolvimento web.
 
 - [x] ID 15 - Configura ambiente com Node.js e NPM para gerenciamento de pacotes e dependências.
 - [x] ID 16 - Utiliza boas práticas de versionamento no Git/GitHub (branch main ou branches específicos, uso de .gitignore).
 - [x] ID 17 - Mantém um README.md padronizado, conforme template da disciplina, com checklist preenchido.
-- [ ] ID 18 - Organiza arquivos do projeto de forma modular, seguindo padrão de exemplo fornecido.
+- [x] ID 18 - Organiza arquivos do projeto de forma modular, seguindo padrão de exemplo fornecido.
 - [x] ID 19 - Configura linters e formatadores (ESLint, Prettier) para manter qualidade e padronização do código.
 
 ### RA4 - Aplicar bibliotecas de funções e componentes em JavaScript para aprimorar a interatividade de páginas web.
 
-- [ ] ID 20 - Utiliza jQuery para manipulação do DOM e interatividade (eventos, animações, manipulação de elementos)
-- [ ] ID 21 - Integra e configura um plugin jQuery relevante (ex.: jQuery Mask Plugin).
+- [x] ID 20 - Utiliza jQuery para manipulação do DOM e interatividade (eventos, animações, manipulação de elementos)
+- [x] ID 21 - Integra e configura um plugin jQuery relevante (ex.: jQuery Mask Plugin).
 
 ### RA5 - Efetuar requisições assíncronas para uma API fake e APIs públicas, permitindo a obtenção e manipulação de dados dinamicamente.
 
-- [ ] ID 22 - Realiza requisições assíncronas para uma API fake (ex.: JSON Server) para persistir dados de um formulário.
-- [ ] ID 23 - Realiza requisições assíncronas para uma API fake para exibir dados na página.
-- [ ] ID 24 - Realiza requisições assíncronas para APIs públicas reais (OpenWeather, ViaCEP etc.), exibindo os dados e tratando erros.
+- [x] ID 22 - Realiza requisições assíncronas para uma API fake (ex.: JSON Server) para persistir dados de um formulário.
+- [x] ID 23 - Realiza requisições assíncronas para uma API fake para exibir dados na página.
+- [x] ID 24 - Realiza requisições assíncronas para APIs públicas reais (OpenWeather, ViaCEP etc.), exibindo os dados e tratando erros.
 
 ## 📖 Manual de Execução
 
-Em andamento.
+# Manual de Execução do Sistema
+
+- Clonar o repositório do projeto: `git clone <URL_DO_REPOSITORIO>`;
+- Acessar a branch **develop**, que contém as modificações mais recentes: `git checkout develop`;
+- Abrir o projeto no Visual Studio Code (VS Code) ou em outro editor de código;
+- Abrir um terminal apontando para o diretório raiz do projeto;
+- Instalar as dependências do projeto: `npm install`;
+- Executar a API Fake (JSON Server): `npx json-server --watch db.json`;
+- Abrir o arquivo `index.html` utilizando a extensão **Live Server** do Visual Studio Code;
+- O sistema estará disponível no navegador, mantendo o JSON Server em execução.
 
 ## 📱 Telas de Aplicação
 
